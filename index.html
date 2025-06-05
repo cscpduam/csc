@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science | PDUAM, Amjonga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+<link rel="preload" href="sikh.jpg" as="image">
+<link rel="preload" href="sem.jpg" as="image">
+<link rel="preload" href="aw.jpg" as="image">
+<link rel="preload" href="pic.jpg" as="image">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #DAA520;
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --assam-red: #FF5733;
+        }
+        
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.1;
+    body {
+    background-color: #e9eff6;
+}
+
+}
+
+
+
+
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1rem 0.3rem;
+            border-bottom: 8px solid var(--secondary);
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo-container img {
+            height: 60px;
+        }
+ 
+        /* Add this with your other header styles */
+h1 {
+    /* Keep your existing 3D styles */
+    font-size: 3rem;
+    text-shadow: 
+        0 2px 0 #fff,
+        0 3px 0 #FF0000,
+        0 4px 0 #FFD700,
+        0 5px 10px rgba(0,0,0,0.2);
+    color: #FFD700;
+    position: relative;
+    display: inline-block;
+    margin: 0.5rem 0;
+    transform: perspective(500px) rotateX(10deg);
+    text-align: center;
+    letter-spacing: 1px;
+    
+    /* New grow-shrink animation */
+    animation: 
+        glow 2s ease-in-out infinite alternate,
+        pulse 3s ease-in-out infinite;
+}
+
+/* Add this new keyframes */
+@keyframes pulse {
+    0%, 100% {
+        transform: perspective(500px) rotateX(10deg) scale(1);
+    }
+    50% {
+        transform: perspective(500px) rotateX(10deg) scale(1.05);
+    }
+}
+
+/* Mobile responsive version */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        animation: 
+            glow 2s ease-in-out infinite alternate,
+            pulse 3s ease-in-out infinite;
+    }
+}        
+        .department-name {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+.mission-notification-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: rgb(255,255,200);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.mission-left {
+    flex: 2;
+    min-width: 200px;
+}
+
+.notification-right {
+    flex: 1;
+    min-width: 260px;
+    background: rgb(242,240,230);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    color: red;
+}
+
+.notification-card.auto-scroll {
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.notification-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0;
+    animation: scroll-up 15s linear infinite;
+}
+
+.notification-list:hover {
+    animation-play-state: paused;
+}
+
+.notification-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-list li::before {
+    content: "🔔";
+    position: absolute;
+    left: 0;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.badge-new {
+    background: #FFD700;
+    color: red;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+
+	
+	.blink-text {
+    font-size: 1.3rem;
+    color: #007BFF; /* Bright Blue */
+    animation: pulseBlink 8s ease-in-out infinite;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+@keyframes pulseBlink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.1);
+    }
+}
+
+        
+        /* Main Content */
+        .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4); /* Add this line */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Optional for soft shadow */
+}
+
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+/* Slideshow and Notifications Wrapper */
+.slideshow-notification-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: rgb(255,255,200);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Slideshow Section */
+.slideshow-section {
+    flex: 2;
+    min-width: 200px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Focus on the top portion of images */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.slideshow img:first-child {
+    opacity: 1;
+}
+
+/* Mission Content Wrapper */
+.mission-content-wrapper {
+    width: 100%;
+    background: white;
+    padding: 1rem;
+}
+
+.mission-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}        /* Faculty Grid */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        /* Faculty Card Container */
+.faculty-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures uniform card heights */
+}
+
+/* Image Wrapper */
+.faculty-img-wrapper {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Faculty Photo */
+.faculty-photo {
+    object-position: top center; /* Focus on faces */
+    height: 100%;
+    width: 100%;
+}
+/* Faculty Info Section */
+.faculty-info {
+    padding: 1.5rem;
+    text-align: center; /* Centers all text */
+    flex-grow: 1; /* Pushes content to align properly */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content */
+}
+
+.faculty-name {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.faculty-title {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+        
+        /* SWOC Analysis */
+        .swoc-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .swoc-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .strength { border-top: 4px solid #28a745; }
+        .weakness { border-top: 4px solid #dc3545; }
+        .opportunity { border-top: 4px solid #17a2b8; }
+        .challenge { border-top: 4px solid #ffc107; }
+        
+        .swoc-card h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .swoc-card ul {
+            padding-left: 1.5rem;
+        }
+        
+        .swoc-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Student Corner */
+        .student-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .resource-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .drive-btn {
+            display: inline-block;
+            background: #4285F4;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .drive-btn:hover {
+            background: #3367D6;
+        }
+        
+        /* Calendar */
+        .calendar-container {
+            margin-top: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        
+        .calendar-day {
+            padding: 0.5rem;
+            text-align: center;
+            border-radius: 4px;
+        }
+        
+        .calendar-day.heading {
+            font-weight: bold;
+            background: #f0f0f0;
+        }
+        
+        .event-day {
+            background: #e3f2fd;
+            position: relative;
+        }
+        
+        .event-day::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .department-name {
+                font-size: 1.4rem;
+            }
+            
+            .faculty-grid, .student-resources, .swoc-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<script>
+    // Simple Background Slideshow
+    document.addEventListener('DOMContentLoaded', function() {
+    // Slideshow functionality
+    const slides = document.querySelectorAll('.slideshow img');
+    let currentIndex = 0;
+    
+    if(slides.length > 0) slides[0].style.opacity = 1;
+    
+    setInterval(function() {
+        slides[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.opacity = 1;
+    }, 3000);
+
+    // Rest of your existing JavaScript...
+});
+</script>
+<body>
+    <!-- Header -->
+    <header>
+        
+<div class="logo-container">
+    <div class="logo-left">
+        <img src="4.jpg" alt="Left Logo">
+    </div>
+    <div class="title-block">
+        <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
+        <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
+    </div>
+    <div class="logo-right">
+        <img src="2.jpg" alt="Right Logo">
+    </div>
+</div>
+
+
+
+
+        <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#students">Student Corner</a></li>
+            <li><a href="#swoc">SWOC</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Mission & Vision -->
+
+
+<section id="mission" style="padding: 0;">
+    <!-- Slideshow and Notifications Row -->
+    <div class="slideshow-notification-wrapper">
+        <!-- Slideshow Section -->
+        <div class="slideshow-section">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <img src="sikh.jpg" alt="Dr. Sisir Kumar Rajbongshi">
+                    <img src="sem.jpg" alt="Dr. Kshirod Sarmah">
+                    <img src="aw.jpg" alt="Dharmeswar Tarang">
+                    <img src="pic.jpg" alt="Dr. Rajdeep Ghosh">
+			<img src="lab.jpg" alt="laboratory">
+		<img src="su.jpg" alt="seminar">
+		<img src="bro.jpg" alt="quiz">
+
+
+	<img src="nep.jpg" alt="nep">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="notification-right">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+            <div class="notification-card auto-scroll">
+                <ul class="notification-list">
+                    <li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
+                    <li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
+                    <li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
+                    <li><strong>June 20, 2025:</strong> Internal Assessment begins</li>
+                    <li><strong>June 25, 2025:</strong> Summer vacation notice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission & Vision Content -->
+    <div class="mission-content-wrapper">
+        <div class="mission-content">
+            <h2><i class="fas fa-bullseye"></i> Our Mission & Vision</h2>
+            
+            <div class="mv-card">
+                <h3>Mission</h3>
+                <p align="justify">To provide quality education in Computer Science that empowers students with technical skills, ethical values, and innovative thinking to meet global challenges while preserving local cultural identity.</p>
+            </div>
+            
+            <div class="mv-card">
+                <h3>Vision</h3>
+                <p align="justify">To become a center of excellence in computer education and research in Northeast India, producing socially responsible professionals who contribute to technological advancement in Assam and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        
+        <!-- Faculty Section -->
+        <section id="faculty">
+            <h2><i class="fas fa-chalkboard-teacher"></i> Our Faculty</h2>
+            
+            <div class="faculty-grid">
+                <!-- Dr. Sisir Kumar Rajbongshi -->
+<div class="faculty-card">
+    <div class="faculty-img-wrapper">
+        <img src="sisir.jpg" alt="Dr. Sisir Kumar Rajbongshi" class="faculty-photo">
+    </div>
+    <div class="faculty-info">
+        <div class="faculty-name">Dr. Sisir Kumar Rajbongshi</div>
+        <div class="faculty-title">Assistant Professor</div>
+	<p>Specialization: Fuzzy Algebra, Data Mining</p>
+        <a href="https://sisirrajbongshi.github.io/SISIR/" target="_blank" class="drive-btn">View Profile</a>
+    </div>
+</div>
+
+
+                
+                
+                <!-- Dr. Kshirod Sarmah -->
+                
+<div class="faculty-card">
+    <div class="faculty-img-wrapper">
+        <img src="KS.jpg" alt="Dr. Kshirod sarmah" class="faculty-photo">
+    </div>
+    <div class="faculty-info">
+        <div class="faculty-name">Dr. Kshirod Sarmah</div>
+        <div class="faculty-title">Assistant Professor</div>
+	<p>Specialization: Computer Networks, Signal Processing</p>
+        <a href="https://kshirod178.github.io/Dr-Kshirod-Sarmah/" target="_blank" class="drive-btn">View Profile</a>
+    </div>
+</div>
+
+
+                
+                <!-- Dharmeswar Tarang -->
+                
+
+<div class="faculty-card">
+    <div class="faculty-img-wrapper">
+        <img src="DT.jpg" alt="Dharmeswar tarang" class="faculty-photo">
+    </div>
+    <div class="faculty-info">
+        <div class="faculty-name">Dharmeswar Tarang (HoD)</div>
+        <div class="faculty-title">Assistant Professor</div>
+	<p>Specialization: Data Mining, Computer Network, AI</p>
+    </div>
+</div>
+
+
+                
+                <!-- Dr. Rajdeep Ghosh -->
+                
+
+<div class="faculty-card">
+    <div class="faculty-img-wrapper">
+        <img src="RG.jpg" alt="Rajdeep Ghosh" class="faculty-photo">
+    </div>
+    <div class="faculty-info">
+        <div class="faculty-name">Dr Rajdeep Ghosh</div>
+        <div class="faculty-title">Assistant Professor</div>
+	<p>Specialization: Machine Learning, AI, Cloud Computing</p>
+    </div>
+</div>
+
+
+<div class="faculty-card">
+    <div class="faculty-img-wrapper">
+        <img src="NK.jpg" alt="Keleng" class="faculty-photo">
+    </div>
+    <div class="faculty-info">
+        <div class="faculty-name">Niranjan Keleng</div>
+        <div class="faculty-title">Laboratory Bearer</div>
+    </div>
+</div>
+
+
+            </div>
+        </section>
+        
+        <!-- Student Corner -->
+        <section id="students">
+            <h2><i class="fas fa-user-graduate"></i> Student Corner</h2>
+            
+            <div class="student-resources">
+                <!-- Old Question Papers -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Question Papers</h3>
+                    <p>Access previous years' question papers to prepare for your exams</p>
+                    <a href="https://drive.google.com/drive/folders/1vMoI5Lq9IbOr1ZjGpihMzB4Iy21HoiuX?usp=drive_link" class="drive-btn" target="_blank">
+                        <i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+                </div>
+                
+                <!-- Syllabus -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Syllabus</h3>
+                    <p>Download the latest syllabus for all semesters</p>
+                    <a href="https://drive.google.com/drive/folders/1pFUdauxfhRziKuvfK8gnTA1I_8sw-7zL?usp=drive_link" class="drive-btn" target="_blank">
+                        <i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+                </div>
+                
+                <!-- Class Notes -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-notes"></i>
+                    </div>
+                    <h3>Class Notes</h3>
+                    <p>Comprehensive notes for all subjects</p>
+                    <a href="https://drive.google.com/drive/folders/14tOddTXJsFs4oOJUfQrEmBJOIEBNz58G?usp=drive_link" class="drive-btn" target="_blank">
+                        <i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Student Achievements -->
+            <h3 style="margin-top: 3rem;"><i class="fas fa-trophy"></i> Student Achievements</h3>
+            
+            <div class="achievement-card">
+                <h4>GATE Qualified 2023</h4>
+                <p>Congratulations to <strong>Rahul Sharma</strong> for qualifying GATE with AIR 1245 in Computer Science!</p>
+            </div>
+            
+            <div class="achievement-card">
+                <h4>Hackathon Winners</h4>
+                <p>Our team <strong>CodeAssam</strong> won 1st prize in the Northeast Inter-College Hackathon 2023.</p>
+            </div>
+        </section>
+        
+        <!-- SWOC Analysis -->
+        <section id="swoc">
+            <h2><i class="fas fa-chart-pie"></i> SWOC Analysis</h2>
+            
+            <div class="swoc-container">
+                <div class="swoc-card strength">
+                    <h4><i class="fas fa-check-circle"></i> Strengths</h4>
+                    <ul>
+                        <li>Only Department in Goalpara offering B.Sc. CS Honours</li>
+                        <li>All faculty positions filled with qualified staff</li>
+                        <li>Excellent undergraduate curriculum (GU CBCS)</li>
+                        <li>Well-furnished lab with 13 PCs + server</li>
+                        <li>Cooperative environment and collaboration</li>
+                    </ul>
+                </div>
+                
+                <div class="swoc-card weakness">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Weaknesses</h4>
+                    <ul>
+                        <li>No Internet/LAN facilities</li>
+                        <li>No trained lab technician</li>
+                        <li>No PG/PhD programs</li>
+                        <li>No dedicated department block</li>
+                        <li>Need additional computer lab</li>
+                    </ul>
+                </div>
+                
+                <div class="swoc-card opportunity">
+                    <h4><i class="fas fa-lightbulb"></i> Opportunities</h4>
+                    <ul>
+                        <li>Build departmental block with advanced labs</li>
+                        <li>Collaborate with other institutions</li>
+                        <li>Increase enrollment in higher studies</li>
+                        <li>Promote computer literacy in region</li>
+                    </ul>
+                </div>
+                
+                <div class="swoc-card challenge">
+                    <h4><i class="fas fa-road"></i> Challenges</h4>
+                    <ul>
+                        <li>Implement campus WiFi for ICT education</li>
+                        <li>Subscribe to scientific journals</li>
+                        <li>Motivate students to choose CS careers</li>
+                        <li>Secure research funding</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Events Calendar -->
+        <section id="events">
+            <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3>November 2023</h3>
+                    <div>
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day heading">Sun</div>
+                    <div class="calendar-day heading">Mon</div>
+                    <div class="calendar-day heading">Tue</div>
+                    <div class="calendar-day heading">Wed</div>
+                    <div class="calendar-day heading">Thu</div>
+                    <div class="calendar-day heading">Fri</div>
+                    <div class="calendar-day heading">Sat</div>
+                    
+                    <!-- Calendar days -->
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day">31</div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day event-day">9 <span class="event-tooltip">Guest Lecture</span></div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day event-day">14 <span class="event-tooltip">Project Submission</span></div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day event-day">17 <span class="event-tooltip">Industrial Visit</span></div>
+                    <div class="calendar-day">18</div>
+                    
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day event-day">22 <span class="event-tooltip">Seminar</span></div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day event-day">28 <span class="event-tooltip">Quiz Competition</span></div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events List -->
+            <h3 style="margin-top: 2rem;">Important Dates</h3>
+            <ul>
+                <li><strong>Nov 9:</strong> Guest Lecture on AI by Dr. Ananya Baruah (IIT Guwahati)</li>
+                <li><strong>Nov 17:</strong> Industrial Visit to TechPark, Guwahati</li>
+                <li><strong>Nov 28:</strong> Annual Coding Competition</li>
+            </ul>
+        </section>
+        
+        <!-- Department Gallery -->
+        <section id="gallery">
+            <h2><i class="fas fa-images"></i> Department Gallery: Some Scenes</h2>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="aw.jpg" alt="Awareness Program">
+                </div>
+                <div class="gallery-item">
+                    <img src="sem.jpg" alt="Book Release">
+                </div>
+                <div class="gallery-item">
+                    <img src="sikh.jpg" alt="Lab Visit">
+                </div>
+                <div class="gallery-item">
+                    <img src="pic.jpg" alt="Industrial Talk">
+                </div>
+
+<div class="gallery-footer" style="text-align:center; margin-top:1rem;">
+    <a href="https://drive.google.com/drive/folders/1rMMRmZjt2ddpokbBkVRF9oGXeKedt4hB?usp=drive_link" class="drive-btn" style="display:inline-flex; align-items:center;">
+        <i class="fab fa-google-drive" style="margin-right:8px;"></i> 
+        View Full Gallery
+    </a>
+</div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+            <p><strong>Department of Computer Science</strong><br>
+            PDUAM, Amjonga<br>
+            Goalpara, Assam - 783121</p>
+            
+            <p><i class="fas fa-phone"></i> +91 97077 21185<br>
+            <i class="fas fa-envelope"></i> csdept@pduamamjonga.ac.in</p>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://pduamamjonga.ac.in" target="_blank">College Website</a>
+            <a href="https://facebook.com/profile.php?id=100083022567984" target="_blank">Facebook Page</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#students">Student Corner</a>
+        </div>
+        <p>&copy; website designed by: Dr Sisir Kr Rajbongshi on behalf of Department of Computer Science, PDUAM, Amjonga</p>
+        <p>Goalpara, Assam - 783124 | Email: csdept@pduamamjonga.ac.in | Phone: +91 7002234501/9401800625/7896482942/9085577988/p>
+    </footer>
+
+    <script>
+        // Calendar Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight current day
+            const today = new Date();
+            if (today.getMonth() === 10) { // November
+                const days = document.querySelectorAll('.calendar-day');
+                days.forEach(day => {
+                    if (parseInt(day.textContent) === today.getDate()) {
+                        day.style.backgroundColor = '#e3f2fd';
+                        day.style.fontWeight = 'bold';
+                    }
+                });
+            }
+            
+            // Simple event tooltips
+            const eventDays = document.querySelectorAll('.event-day');
+            eventDays.forEach(day => {
+                day.addEventListener('mouseover', function() {
+                    const tooltip = this.querySelector('.event-tooltip');
+                    if (tooltip) tooltip.style.visibility = 'visible';
+                });
+                day.addEventListener('mouseout', function() {
+                    const tooltip = this.querySelector('.event-tooltip');
+                    if (tooltip) tooltip.style.visibility = 'hidden';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
