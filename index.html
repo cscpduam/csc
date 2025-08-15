@@ -1249,8 +1249,57 @@ generateCalendar(events);
             });
         });
     </script>
+	<!-- Other content above -->
+
+<style>
+@media (max-width: 768px) {
+    /* Make cards stack vertically */
+    .student-resources, 
+    .resource-card, 
+    .alumni-section,
+    .gallery-section {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto 1rem auto;
+    }
+
+    /* Make text more readable */
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Reduce heading size slightly for mobile */
+    h1, h2, h3 {
+        font-size: 90%;
+    }
+
+    /* Make buttons full-width */
+    .drive-btn, .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Calendar: allow horizontal scroll */
+    #calendar table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Images: scale down to fit screen */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+</style>
 </body>
 </html>
+
 
 
 
