@@ -129,7 +129,7 @@ h1 {
         }
         
         nav li {
-            margin: 0 1rem;
+            margin: 0 0.5rem;
         }
         
         nav a {
@@ -575,6 +575,32 @@ h1 {
                 grid-template-columns: 1fr 1fr;
             }
         }
+.pinned-notifications {
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.pinned-notifications li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.pinned-notifications li::before {
+    content: "📌";
+    position: absolute;
+    left: 0;
+}
+.notification-list li.pinned {
+    background: #fff8dc; /* light gold background */
+    border-left: 4px solid gold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
     </style>
 </head>
 
@@ -621,16 +647,20 @@ h1 {
     
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#faculty">Faculty</a></li>
-            <li><a href="#students">Student Corner</a></li>
-            <li><a href="#swoc">SWOC</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#students">Student Corner</a></li>
+        <li><a href="#swoc">SWOC</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#alumni">Alumni</a></li>
+        <li><a href="#records">Department Records</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
     
     <!-- Main Content -->
     <div class="container">
@@ -661,17 +691,33 @@ h1 {
         </div>
 
         <!-- Notifications Section -->
-        <div class="notification-right">
-            <h2><i class="fas fa-bell"></i> Notifications</h2>
-            <div class="notification-card auto-scroll">
-                <ul class="notification-list">
-                    <li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
-                    <li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
-                    <li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
-                    <li><strong>June 20, 2025:</strong> Internal Assessment begins</li>
-                    <li><strong>June 25, 2025:</strong> Summer vacation notice</li>
-                </ul>
-            </div>
+        <!-- Pinned Notifications (Always on Top) -->
+<!-- Scrolling Notifications -->
+<div class="notification-card auto-scroll">
+    <ul class="notification-list">
+        <!-- Pinned at Top -->
+        <li class="pinned">
+            <a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank">
+                <strong>Class Routine:</strong> View the latest class schedule here
+            </a> 
+            <span class="badge-new">New</span>
+        </li>
+        <li class="pinned">
+            <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank">
+                <strong>Syllabus:</strong> Download the updated syllabus for all semesters
+            </a> 
+            <span class="badge-new">New</span>
+        </li>
+
+        <!-- Rest of notifications -->
+        <li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
+        <li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
+        <li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
+        <li><strong>June 20, 2025:</strong> Internal Assessment begins</li>
+        <li><strong>June 25, 2025:</strong> Summer vacation notice</li>
+    </ul>
+</div>
+
         </div>
     </div>
 
@@ -980,6 +1026,81 @@ h1 {
 </div>
             </div>
         </section>
+
+
+<!-- Alumni Section -->
+<section id="alumni">
+    <h2><i class="fas fa-users"></i> Alumni</h2>
+    <p>Our alumni are the pride of the Department of Computer Science, contributing to academia, industry, and society across the globe. Here you can access detailed records of our past students and their achievements.</p>
+
+    <div class="student-resources">
+        <!-- Past Students Records -->
+        <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3>All Past Students Records</h3>
+            <p>View comprehensive data of all our graduates since the inception of the department.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1BOsLqBGaPJfm05Gr_w1S-X4fMC2NXbyu/edit?usp=sharing&ouid=111772697552234946992&rtpof=true&sd=true" 
+               class="drive-btn" target="_blank">
+                <i class="fab fa-google-drive"></i> Open Google Sheet
+            </a>
+        </div>
+
+        <!-- Higher Education Records -->
+        <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Higher Education Records</h3>
+            <p>Discover our alumni who have pursued higher education at reputed institutions.</p>
+            <a href="https://drive.google.com/file/d/1MHl0ArW-uAwDigeEaeQqZuDyXynoPjsV/view?usp=sharing" 
+               class="drive-btn" target="_blank">
+                <i class="fab fa-google-drive"></i> View Document
+            </a>
+        </div>
+
+        <!-- Employment Records -->
+        <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Employment Records</h3>
+            <p>Learn about alumni who have successfully started their professional careers.</p>
+            <a href="https://drive.google.com/file/d/1MHl0ArW-uAwDigeEaeQqZuDyXynoPjsV/view?usp=sharing" 
+               class="drive-btn" target="_blank">
+                <i class="fab fa-google-drive"></i> View Document
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Department Records Section -->
+<section id="records">
+    <h2><i class="fas fa-archive"></i>Records</h2>
+    <p>
+        The Department of Computer Science maintains detailed academic, administrative, and event records 
+        to ensure transparency and accessibility. These archives document our journey, milestones, and 
+        contributions to the field of education.
+    </p>
+    <div class="student-resources">
+        <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fas fa-folder-open"></i>
+            </div>
+            <h3>Access Complete Department Records</h3>
+            <p>Browse all official departmental records, including Class Routines, annual reports, program details, 
+               meeting documents, and activity archives.</p>
+            <a href="https://drive.google.com/drive/folders/1KCbccXiT0jBQeYQx7k3e6qM2zAVzYH8M?usp=sharing" 
+               class="drive-btn" target="_blank">
+                <i class="fab fa-google-drive"></i> View Records Folder
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
         
         <!-- Contact Section -->
         <section id="contact">
