@@ -952,76 +952,137 @@ h1 {
         
         <!-- Events Calendar -->
         <section id="events">
-            <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
-            
-            <div class="calendar-container">
-                <div class="calendar-header">
-                    <h3>November 2023</h3>
-                    <div>
-                        <button><i class="fas fa-chevron-left"></i></button>
-                        <button><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                
-                <div class="calendar-grid">
-                    <div class="calendar-day heading">Sun</div>
-                    <div class="calendar-day heading">Mon</div>
-                    <div class="calendar-day heading">Tue</div>
-                    <div class="calendar-day heading">Wed</div>
-                    <div class="calendar-day heading">Thu</div>
-                    <div class="calendar-day heading">Fri</div>
-                    <div class="calendar-day heading">Sat</div>
-                    
-                    <!-- Calendar days -->
-                    <div class="calendar-day">29</div>
-                    <div class="calendar-day">30</div>
-                    <div class="calendar-day">31</div>
-                    <div class="calendar-day">1</div>
-                    <div class="calendar-day">2</div>
-                    <div class="calendar-day">3</div>
-                    <div class="calendar-day">4</div>
-                    
-                    <div class="calendar-day">5</div>
-                    <div class="calendar-day">6</div>
-                    <div class="calendar-day">7</div>
-                    <div class="calendar-day">8</div>
-                    <div class="calendar-day event-day">9 <span class="event-tooltip">Guest Lecture</span></div>
-                    <div class="calendar-day">10</div>
-                    <div class="calendar-day">11</div>
-                    
-                    <div class="calendar-day">12</div>
-                    <div class="calendar-day">13</div>
-                    <div class="calendar-day event-day">14 <span class="event-tooltip">Project Submission</span></div>
-                    <div class="calendar-day">15</div>
-                    <div class="calendar-day">16</div>
-                    <div class="calendar-day event-day">17 <span class="event-tooltip">Industrial Visit</span></div>
-                    <div class="calendar-day">18</div>
-                    
-                    <div class="calendar-day">19</div>
-                    <div class="calendar-day">20</div>
-                    <div class="calendar-day">21</div>
-                    <div class="calendar-day event-day">22 <span class="event-tooltip">Seminar</span></div>
-                    <div class="calendar-day">23</div>
-                    <div class="calendar-day">24</div>
-                    <div class="calendar-day">25</div>
-                    
-                    <div class="calendar-day">26</div>
-                    <div class="calendar-day">27</div>
-                    <div class="calendar-day event-day">28 <span class="event-tooltip">Quiz Competition</span></div>
-                    <div class="calendar-day">29</div>
-                    <div class="calendar-day">30</div>
-                    <div class="calendar-day">1</div>
-                    <div class="calendar-day">2</div>
-                </div>
-            </div>
-            
-            <!-- Upcoming Events List -->
-            <h3 style="margin-top: 2rem;">Important Dates</h3>
-            <ul>
-                <li><strong>Nov 9:</strong> Guest Lecture on AI by Dr. Ananya Baruah (IIT Guwahati)</li>
-                <li><strong>Nov 17:</strong> Industrial Visit to TechPark, Guwahati</li>
-                <li><strong>Nov 28:</strong> Annual Coding Competition</li>
-            </ul>
+           <!-- Upcoming Events Section -->
+<h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+<div id="calendar"></div>
+
+<script>
+function generateCalendar(events) {
+    const calendarEl = document.getElementById('calendar');
+    const today = new Date();
+    const month = today.getMonth();
+    const year = today.getFullYear();
+
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    let html = `<h3>${monthNames[month]} ${year}</h3>`;
+    html += `<table><thead><tr>
+        <th>Sun</th><th>Mon</th><th>Tue</th>
+        <th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+    </tr></thead><tbody>`;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    let day = 1;
+    for (let i = 0; i < 6; i++) {
+        html += "<tr>";
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay) {
+                html += "<td></td>";
+            } else if (day > daysInMonth) {
+                html += "<td></td>";
+            } else {
+                const eventText = events[day] ? `<div class='event'>${events[day]}</div>` : "";
+                html += `<td>${day}${eventText}</td>`;
+                day++;
+            }
+        }
+        html += "</tr>";
+    }
+    html += "</tbody></table>";
+    calendarEl.innerHTML = html;
+}
+
+// Example current month events
+const events = {
+    5: "Guest Lecture",
+    12: "Project Submission",
+    20: "Quiz Competition"
+};
+
+generateCalendar(events);
+</script>
+
+<!-- Past Events Section -->
+<h3 style="margin-top:2rem;"><i class="fas fa-check-circle"></i> Past Events</h3>
+<ul class="event-list">
+    <li><strong>Awareness Program – “Computer Science and its Future Scope”</strong><br>
+        Venue: Rangjuli Higher Secondary School (24 June 2022)<br>
+        Resource Persons: Dr Sisir Kumar Rajbongshi, Subhomoy Dey, Kshirod Sarmah
+    </li>
+    <li><strong>Book Inauguration Program – “College Computer Science”</strong><br>
+        Venue: Smart Class Room-1, PDUAM Amjonga<br>
+        Author: Dr Kshirod Sarmah
+    </li>
+    <li><strong>Industry Talk – “Computer Science in Corporate Sector”</strong><br>
+        Speaker: Mr. Sudeep Dey, Lead Data Engineer, Lowe’s Technology, USA (22 October 2022)
+    </li>
+    <li><strong>Lecture Series – “Importance of Computer Learning and Computer Science in Career Building”</strong><br>
+        Speaker: Dr Manoj Deka, Assistant Professor, Bodoland University (27 June 2019)
+    </li>
+    <li><strong>Talk – “Understanding Statistics”</strong><br>
+        Speaker: Prof. Kishore Sinha, Ex-Dean, Birsa Agricultural University (6 October 2018)
+    </li>
+    <li><strong>National Level e-Quiz – “Advances in Computer Science and Information Technology”</strong><br>
+        (11–12 July 2020)
+    </li>
+    <li><strong>Awareness Program – “Corona Virus”</strong><br>
+        Venue: National Highway 37 (19 March 2020)
+    </li>
+    <li><strong>Field Trip – Chanddubi</strong> (28 December 2020)</li>
+    <li><strong>Field Trip – Ukiam</strong> (23 December 2021)</li>
+    <li><strong>Cultural Rally – Annual College Week</strong> (18 February 2020 & 12 September 2018)</li>
+    <li><strong>MoU Signed – With Dudhnoi College</strong> (14 October 2022)</li>
+    <li><strong>MoU Signed – With Rangjuli Higher Secondary School</strong> (20 May 2023)</li>
+    <li><strong>Faculty Exchange Program – With Dudhnoi College</strong> (Date not specified)</li>
+    <li><strong>Lecture Series – “Higher Studies Options in Computer Science”</strong><br>
+        Speaker: Dr Rubul Kr Bania, NEHU (22 April 2022)
+    </li>
+    <li><strong>Laboratory Visit – Amjonga High School</strong> (16 May 2023)</li>
+    <li><strong>Inauguration of Certificate Course – “30 Hours Certificate Course in Computer Applications”</strong><br>
+        (17–28 April 2023)
+    </li>
+    <li><strong>Departmental Library Inauguration</strong> (6 December 2021)</li>
+</ul>
+
+<style>
+.event-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+.event-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+.event-list strong {
+    color: var(--secondary);
+}
+#calendar {
+    margin-bottom: 1.5rem;
+}
+#calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#calendar th, #calendar td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+}
+#calendar .event {
+    background: var(--secondary);
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+</style>
+
         </section>
         
         <!-- Department Gallery -->
@@ -1188,6 +1249,7 @@ h1 {
     </script>
 </body>
 </html>
+
 
 
 
