@@ -1306,8 +1306,45 @@ generateCalendar(events);
         margin-bottom: 0.5rem;
     }
 }
-</style></body>
+</style>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTop">↑</button>
+	<script>
+window.onscroll = function() {
+    document.getElementById("backToTop").style.display = 
+        (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+};
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+	<style>
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#backToTop:hover {
+  background-color: #333;
+}
+</style>
+
+</body>
 </html>
+
 
 
 
