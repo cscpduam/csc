@@ -156,18 +156,12 @@
             flex: 2;
             min-width: 200px;
             position: relative;
-            /* Removed fixed height */
+            padding-bottom: 40%; 
             border-radius: 8px;
-        }
-        
-        .slideshow-container {
-            width: 100%;
-            padding-top: 60%; /* This is a common trick to maintain aspect ratio */
-            position: relative;
             overflow: hidden;
         }
         
-        .slideshow {
+        .slideshow-container {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -175,7 +169,14 @@
             left: 0;
         }
         
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
         .slideshow img {
+            position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -326,6 +327,12 @@
 
             .slideshow-notification-wrapper {
                 flex-direction: column;
+            }
+
+            .slideshow-section {
+                /* New change: Set a specific height for mobile */
+                height: 50vw;
+                padding-bottom: 0;
             }
         }
     </style>
