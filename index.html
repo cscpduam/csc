@@ -329,10 +329,16 @@
                 flex-direction: column;
             }
 
+            /* New change: Re-adjusted slideshow height for mobile to prevent large gaps */
             .slideshow-section {
-                /* New change: Set a specific height for mobile */
-                height: 50vw;
                 padding-bottom: 0;
+                min-height: 40vh; /* Ensures the slideshow has a minimum height */
+            }
+
+            /* New change: Allow the notification card to grow to fit content on mobile */
+            .notification-card.auto-scroll {
+                max-height: none;
+                overflow: visible;
             }
         }
     </style>
