@@ -88,8 +88,19 @@
         @keyframes scroll-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 
         .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4); border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+.blink-text {
+    color: #FFD700; /* gold for visibility */
+    font-weight: bold;
+    animation: blink 1.2s infinite;
+}
 
-      /* Footer */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+      
+        /* Footer */
         footer {
             background: var(--primary);
             color: white;
@@ -158,7 +169,7 @@
             </div>
             <div class="logo-right"><img alt="Right Logo" src="2.jpg"/></div>
         </div>
-        <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+        <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিৱী</p>
     </header>
 
     <nav>
@@ -240,6 +251,7 @@
 
 </body>
 </html>
+
 
 
 
