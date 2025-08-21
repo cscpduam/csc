@@ -156,25 +156,26 @@
             flex: 2;
             min-width: 200px;
             position: relative;
-            height: 300px;
-            overflow: hidden;
+            /* Removed fixed height */
             border-radius: 8px;
         }
         
         .slideshow-container {
             width: 100%;
-            height: 100%;
+            padding-top: 60%; /* This is a common trick to maintain aspect ratio */
             position: relative;
+            overflow: hidden;
         }
         
         .slideshow {
             width: 100%;
             height: 100%;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         
         .slideshow img {
-            position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -322,6 +323,10 @@
             .gallery {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .slideshow-notification-wrapper {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -367,12 +372,7 @@
             <li><a href="alumni.html">Alumni</a></li>
             <li><a href="archives.html">Archives</a></li>
             <li><a href="tribute.html">Tribute</a></li>
-	<li><a href="contact.html">contact</a></li>
-
-
-
-
-
+            <li><a href="contact.html">contact</a></li>
         </ul>
     </nav>
 
@@ -395,7 +395,7 @@
                             <img alt="seminar" src="su.jpg"/>
                             <img alt="quiz" src="bro.jpg"/>
                             <img alt="nep" src="nep.jpg"/>
-                            <img alt="meg" src="meg.jpg"/>
+                            <img alt="meg.jpg"/>
                         </div>
                     </div>
                 </div>
