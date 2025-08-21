@@ -7,19 +7,9 @@
     <meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
     <title>Department of Computer Science | PDUAM, Amjonga</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <!-- Preload images to improve loading speed -->
-    <link as="image" href="sikh.jpg" rel="preload"/>
-    <link as="image" href="sem.jpg" rel="preload"/>
-    <link as="image" href="5th.jpg" rel="preload"/>
-    <link as="image" href="aw.jpg" rel="preload"/>
-    <link as="image" href="pic.jpg" rel="preload"/>
-    <link as="image" href="lab.JPG" rel="preload"/>
-    <link as="image" href="su.jpg" rel="preload"/>
-    <link as="image" href="bro.jpg" rel="preload"/>
-    <link as="image" href="nep.jpg" rel="preload"/>
-    <link as="image" href="meg.jpg" rel="preload"/>
+    
     <style>
         :root {
             --primary: #2C3E50;
@@ -39,12 +29,10 @@
             background-color: #e9eff6;
         }
         
-        /* Header */
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('3.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('3.jpg');
             background-size: cover;
-            background-position: center; /* Ensures the image is centered */
+            background-position: center;
             color: white;
             text-align: center;
             padding: 1rem 0.3rem;
@@ -59,324 +47,71 @@
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
-        
-        .logo-container img {
-            height: 60px;
-        }
+        .logo-container img { height: 60px; }
  
-        /* 3D and Animation for H1 */
         h1 {
             font-size: 3rem;
-            text-shadow: 
-                0 2px 0 #fff,
-                0 3px 0 #FF0000,
-                0 4px 0 #FFD700,
-                0 5px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 0 #fff, 0 3px 0 #FF0000, 0 4px 0 #FFD700, 0 5px 10px rgba(0,0,0,0.2);
             color: #FFD700;
-            position: relative;
-            display: inline-block;
             margin: 0.5rem 0;
             transform: perspective(500px) rotateX(10deg);
-            text-align: center;
-            letter-spacing: 1px;
-            animation: 
-                glow 2s ease-in-out infinite alternate,
-                pulse 3s ease-in-out infinite;
+            animation: glow 2s ease-in-out infinite alternate, pulse 3s ease-in-out infinite;
         }
 
         @keyframes pulse {
-            0%, 100% {
-                transform: perspective(500px) rotateX(10deg) scale(1);
-            }
-            50% {
-                transform: perspective(500px) rotateX(10deg) scale(1.05);
-            }
+            0%, 100% { transform: perspective(500px) rotateX(10deg) scale(1); }
+            50% { transform: perspective(500px) rotateX(10deg) scale(1.05); }
         }
         
+        .department-name { font-family: 'Hind Siliguri', sans-serif; font-size: 1.8rem; color: var(--secondary); }
+        nav { background: var(--primary); padding: 1rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+        nav li { margin: 0 0.5rem; }
+        nav a { color: white; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.3s; }
+        nav a:hover { background: var(--secondary); color: var(--primary); }
+
+        .slideshow-notification-wrapper { display: flex; gap: 1rem; flex-wrap: wrap; padding: 1rem; background: rgb(255,255,200); border-radius: 6px; box-shadow: 0 1px 5px rgba(0,0,0,0.1); }
+
+        .slideshow-section { flex: 2; min-width: 200px; position: relative; padding-bottom: 40%; border-radius: 8px; overflow: hidden; }
+        .slideshow-container { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        .slideshow { width: 100%; height: 100%; position: relative; }
+        .slideshow img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0; transition: opacity 1s ease; }
+        .slideshow img:first-child { opacity: 1; }
+
+        .notification-card { flex: 1; min-width: 260px; background: rgb(242,240,230); padding: 1rem; border-radius: 8px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); color: red; }
+        .notification-card.auto-scroll { max-height: 200px; overflow: hidden; }
+        .notification-list { list-style: none; padding-left: 1rem; margin: 0; animation: scroll-up 15s linear infinite; }
+        .notification-list:hover { animation-play-state: paused; }
+        .notification-list li { margin-bottom: 0.75rem; padding-left: 1.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: relative; }
+        .notification-list li::before { content: "🔔"; position: absolute; left: 0; }
+
+        @keyframes scroll-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4); border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+
+        /* ✅ Mobile Responsive Fix */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-                animation: 
-                    glow 2s ease-in-out infinite alternate,
-                    pulse 3s ease-in-out infinite;
-            }
-        }        
-        .department-name {
-            font-family: 'Hind Siliguri', sans-serif;
-            font-size: 1.8rem;
-            color: var(--secondary);
-        }
-        
-        /* Navigation */
-        nav {
-            background: var(--primary);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-        
-        nav li {
-            margin: 0 0.5rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        
-        nav a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-        
-        .slideshow-notification-wrapper {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            padding: 1rem;
-            background: rgb(255,255,200);
-            border-radius: 6px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-        }
-        
-        .slideshow-section {
-            flex: 2;
-            min-width: 200px;
-            position: relative;
-            padding-bottom: 40%; 
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .slideshow-container {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        
-        .slideshow {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        
-        .slideshow img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        .slideshow img:first-child {
-            opacity: 1;
-        }
-        
-        .notification-card {
-            flex: 1;
-            min-width: 260px;
-            background: rgb(242,240,230);
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-            color: red;
-        }
-        
-        .notification-card.auto-scroll {
-            max-height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .notification-list {
-            list-style: none;
-            padding-left: 1rem;
-            margin: 0;
-            animation: scroll-up 15s linear infinite;
-        }
-        
-        .notification-list:hover {
-            animation-play-state: paused;
-        }
-        
-        .notification-list li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.2rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        .notification-list li::before {
-            content: "🔔";
-            position: absolute;
-            left: 0;
-        }
-        
-        @keyframes scroll-up {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-50%);
-            }
-        }
-        
-        .badge-new {
-            background: #FFD700;
-            color: red;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            margin-left: 0.5rem;
-            font-weight: bold;
-        }
-        
-        .blink-text {
-            font-size: 1.3rem;
-            color: #007BFF; /* Bright Blue */
-            animation: pulseBlink 8s ease-in-out infinite;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 1rem;
-            display: inline-block;
-        }
-        
-        @keyframes pulseBlink {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.2;
-                transform: scale(1.1);
-            }
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        /* Pinned notifications */
-        .pinned-notifications {
-            list-style: none;
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        .pinned-notifications li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.2rem;
-        }
-        
-        .pinned-notifications li::before {
-            content: "�";
-            position: absolute;
-            left: 0;
-        }
-        
-        .notification-list li.pinned {
-            background: #fff8dc; /* light gold background */
-            border-left: 4px solid gold;
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
+            .logo-container { flex-direction: column; gap: 1rem; }
+            .logo-container img { height: 50px; }
+            h1 { font-size: 1.5rem; line-height: 1.2; animation: none; margin: 0; }
+            .department-name { font-size: 1.1rem; }
+            .blink-text { font-size: 0.9rem; }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                background-size: cover;
-                background-position: center; /* Ensures the image is centered */
-            }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 0.5rem 0; }
 
-            .logo-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .slideshow-notification-wrapper { flex-direction: column; }
+            .slideshow-section { position: relative; width: 100%; height: auto; padding-bottom: 56%; margin-bottom: 1rem; }
+            .slideshow-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-            .logo-container img {
-                height: 50px; /* Adjust logo size */
-            }
+            .notification-card { width: 100%; margin-top: 1rem; }
+            .notification-card.auto-scroll { max-height: none; overflow: visible; }
 
-            .title-block {
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-                line-height: 1.2;
-                animation: none;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .department-name {
-                font-size: 1.2rem;
-            }
-
-            .blink-text {
-                font-size: 1rem;
-            }
-
-            .faculty-grid, .student-resources, .swoc-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .slideshow-notification-wrapper {
-                flex-direction: column;
-            }
-
-            .slideshow-section {
-                padding-bottom: 0;
-                min-height: 40vh;
-            }
-
-            .notification-card.auto-scroll {
-                max-height: none;
-                overflow: visible;
-            }
-
-            nav ul {
-                flex-direction: column !important;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem 0;
-            }
+            .faculty-grid, .student-resources, .swoc-container, .gallery { grid-template-columns: 1fr; }
         }
     </style>
 </head>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const slides = document.querySelectorAll('.slideshow img');
@@ -389,25 +124,20 @@
         }, 3000);
     });
 </script>
+
 <body>
-    <!-- Header -->
     <header>
         <div class="logo-container">
-            <div class="logo-left">
-                <img alt="Left Logo" src="4.jpg"/>
-            </div>
+            <div class="logo-left"><img alt="Left Logo" src="4.jpg"/></div>
             <div class="title-block">
                 <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
                 <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
             </div>
-            <div class="logo-right">
-                <img alt="Right Logo" src="2.jpg"/>
-            </div>
+            <div class="logo-right"><img alt="Right Logo" src="2.jpg"/></div>
         </div>
         <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -419,17 +149,13 @@
             <li><a href="alumni.html">Alumni</a></li>
             <li><a href="archives.html">Archives</a></li>
             <li><a href="tribute.html">Tribute</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- Mission & Vision -->
         <section id="mission" style="padding: 0;">
-            <!-- Slideshow and Notifications Row -->
             <div class="slideshow-notification-wrapper">
-                <!-- Slideshow Section -->
                 <div class="slideshow-section">
                     <div class="slideshow-container">
                         <div class="slideshow">
@@ -442,28 +168,15 @@
                             <img alt="seminar" src="su.jpg"/>
                             <img alt="quiz" src="bro.jpg"/>
                             <img alt="nep" src="nep.jpg"/>
-                            <img alt="meg.jpg"/>
+                            <img alt="meg" src="meg.jpg"/>
                         </div>
                     </div>
                 </div>
 
-                <!-- Notifications Section -->
                 <div class="notification-card auto-scroll">
                     <ul class="notification-list">
-                        <!-- Pinned at Top -->
-                        <li class="pinned">
-                            <a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank">
-                                <strong>Class Routine:</strong> View the latest class schedule here
-                            </a>
-                            <span class="badge-new">New</span>
-                        </li>
-                        <li class="pinned">
-                            <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank">
-                                <strong>Syllabus:</strong> Download the updated syllabus for all semesters
-                            </a>
-                            <span class="badge-new">New</span>
-                        </li>
-                        <!-- Rest of notifications -->
+                        <li class="pinned"><a href="#" target="_blank"><strong>Class Routine:</strong> View the latest class schedule here</a> <span class="badge-new">New</span></li>
+                        <li class="pinned"><a href="#" target="_blank"><strong>Syllabus:</strong> Download the updated syllabus for all semesters</a> <span class="badge-new">New</span></li>
                         <li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
                         <li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
                         <li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
@@ -476,4 +189,3 @@
     </div>
 </body>
 </html>
-�
