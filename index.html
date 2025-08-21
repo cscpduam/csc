@@ -63,16 +63,18 @@
             50% { transform: perspective(500px) rotateX(10deg) scale(1.05); }
         }
         
-        .blink-text {
+      .blink-text {
     color: #FFD700; /* gold for visibility */
     font-weight: bold;
-    animation: blink 3.5s infinite; /* slower blink */
+    animation: blink 5s infinite; /* much slower blink */
 }
 
 @keyframes blink {
-    0%, 45% { opacity: 1; }
-    55%, 100% { opacity: 0; }
+    0%, 40%   { opacity: 1; }   /* visible for longer */
+    50%, 90%  { opacity: 0; }   /* invisible for longer */
+    100%      { opacity: 1; }
 }
+
 
         .department-name { font-family: 'Hind Siliguri', sans-serif; font-size: 1.8rem; color: var(--secondary); }
         nav { background: var(--primary); padding: 1rem; position: sticky; top: 0; z-index: 100; }
@@ -253,6 +255,7 @@
 
 </body>
 </html>
+
 
 
 
