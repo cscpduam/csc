@@ -44,6 +44,7 @@
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('3.jpg');
             background-size: cover;
+            background-position: center; /* Ensures the image is centered */
             color: white;
             text-align: center;
             padding: 1rem 0.3rem;
@@ -295,7 +296,7 @@
         }
         
         .pinned-notifications li::before {
-            content: "📌";
+            content: "�";
             position: absolute;
             left: 0;
         }
@@ -309,9 +310,9 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            /* NEW: Adjust header background and layout for mobile */
             header {
-                background-size: 100% 100%;
+                background-size: cover;
+                background-position: center; /* Ensures the image is centered */
             }
 
             .logo-container {
@@ -328,17 +329,21 @@
             }
 
             h1 {
-                font-size: 1.5rem; /* Reduced font size for mobile */
+                font-size: 1.5rem;
                 line-height: 1.2;
-                animation: none; /* Removed animation for better performance on mobile */
+                animation: none;
+                margin-left: 0;
+                margin-right: 0;
             }
-            
+
             .department-name {
                 font-size: 1.2rem;
             }
 
-            /* --- End of NEW changes for header --- */
-            
+            .blink-text {
+                font-size: 1rem;
+            }
+
             .faculty-grid, .student-resources, .swoc-container {
                 grid-template-columns: 1fr;
             }
@@ -471,3 +476,4 @@
     </div>
 </body>
 </html>
+�
