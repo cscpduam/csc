@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="N5sOGfr399lk6qi9VwQrIiEu5M3uosbvp5XSkTGzeZU" name="google-site-verification"/>
-<meta content="Official website of the Department of Computer Science, PDUAM Amjonga. Explore academic programs, faculty, events, and more." name="description"/>
-<meta content="Computer Science, PDUAM, Amjonga, Assam College, Department Website" name="keywords"/>
-<meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
-<title>Department of Computer Science | PDUAM, Amjonga</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link as="image" href="sikh.jpg" rel="preload"/>
-<link as="image" href="sem.jpg" rel="preload"/>
-<link as="image" href="aw.jpg" rel="preload"/>
-<link as="image" href="pic.jpg" rel="preload"/>
-<link as="image" href="5th.jpg" rel="preload"/>
-	<link as="image" href="meg.jpg" rel="preload"/>
-<style>
+    <meta charset="utf-8"/>
+    <meta content="Official website of the Department of Computer Science, PDUAM Amjonga. Explore academic programs, faculty, events, and more." name="description"/>
+    <meta content="Computer Science, PDUAM, Amjonga, Assam College, Department Website" name="keywords"/>
+    <meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
+    <title>Department of Computer Science | PDUAM, Amjonga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Preload images to improve loading speed -->
+    <link as="image" href="sikh.jpg" rel="preload"/>
+    <link as="image" href="sem.jpg" rel="preload"/>
+    <link as="image" href="5th.jpg" rel="preload"/>
+    <link as="image" href="aw.jpg" rel="preload"/>
+    <link as="image" href="pic.jpg" rel="preload"/>
+    <link as="image" href="lab.JPG" rel="preload"/>
+    <link as="image" href="su.jpg" rel="preload"/>
+    <link as="image" href="bro.jpg" rel="preload"/>
+    <link as="image" href="nep.jpg" rel="preload"/>
+    <link as="image" href="meg.jpg" rel="preload"/>
+    <style>
         :root {
             --primary: #2C3E50;
             --secondary: #DAA520;
@@ -27,18 +31,13 @@
         }
         
         body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.1;
-    background-color: #e9eff6;
-}
-
-
-
-
-
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.1;
+            background-color: #e9eff6;
+        }
         
         /* Header */
         header {
@@ -64,48 +63,43 @@
             height: 60px;
         }
  
-        /* Add this with your other header styles */
-h1 {
-    /* Keep your existing 3D styles */
-    font-size: 3rem;
-    text-shadow: 
-        0 2px 0 #fff,
-        0 3px 0 #FF0000,
-        0 4px 0 #FFD700,
-        0 5px 10px rgba(0,0,0,0.2);
-    color: #FFD700;
-    position: relative;
-    display: inline-block;
-    margin: 0.5rem 0;
-    transform: perspective(500px) rotateX(10deg);
-    text-align: center;
-    letter-spacing: 1px;
-    
-    /* New grow-shrink animation */
-    animation: 
-        glow 2s ease-in-out infinite alternate,
-        pulse 3s ease-in-out infinite;
-}
+        /* 3D and Animation for H1 */
+        h1 {
+            font-size: 3rem;
+            text-shadow: 
+                0 2px 0 #fff,
+                0 3px 0 #FF0000,
+                0 4px 0 #FFD700,
+                0 5px 10px rgba(0,0,0,0.2);
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0;
+            transform: perspective(500px) rotateX(10deg);
+            text-align: center;
+            letter-spacing: 1px;
+            animation: 
+                glow 2s ease-in-out infinite alternate,
+                pulse 3s ease-in-out infinite;
+        }
 
-/* Add this new keyframes */
-@keyframes pulse {
-    0%, 100% {
-        transform: perspective(500px) rotateX(10deg) scale(1);
-    }
-    50% {
-        transform: perspective(500px) rotateX(10deg) scale(1.05);
-    }
-}
-
-/* Mobile responsive version */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-        animation: 
-            glow 2s ease-in-out infinite alternate,
-            pulse 3s ease-in-out infinite;
-    }
-}        
+        @keyframes pulse {
+            0%, 100% {
+                transform: perspective(500px) rotateX(10deg) scale(1);
+            }
+            50% {
+                transform: perspective(500px) rotateX(10deg) scale(1.05);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                animation: 
+                    glow 2s ease-in-out infinite alternate,
+                    pulse 3s ease-in-out infinite;
+            }
+        }        
         .department-name {
             font-family: 'Hind Siliguri', sans-serif;
             font-size: 1.8rem;
@@ -147,418 +141,170 @@ h1 {
             background: var(--secondary);
             color: var(--primary);
         }
-.mission-notification-wrapper {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 1rem;
-    background: rgb(255,255,200);
-    border-radius: 6px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-}
-
-.mission-left {
-    flex: 2;
-    min-width: 200px;
-}
-
-.notification-right {
-    flex: 1;
-    min-width: 260px;
-    background: rgb(242,240,230);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-    color: red;
-}
-
-.notification-card.auto-scroll {
-    max-height: 200px;
-    overflow: hidden;
-    position: relative;
-}
-
-.notification-list {
-    list-style: none;
-    padding-left: 1rem;
-    margin: 0;
-    animation: scroll-up 15s linear infinite;
-}
-
-.notification-list:hover {
-    animation-play-state: paused;
-}
-
-.notification-list li {
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 1.2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.notification-list li::before {
-    content: "🔔";
-    position: absolute;
-    left: 0;
-}
-
-@keyframes scroll-up {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
-}
-
-.badge-new {
-    background: #FFD700;
-    color: red;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    margin-left: 0.5rem;
-    font-weight: bold;
-}
-
-
-	
-	.blink-text {
-    font-size: 1.3rem;
-    color: #007BFF; /* Bright Blue */
-    animation: pulseBlink 8s ease-in-out infinite;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 1rem;
-    display: inline-block;
-}
-
-@keyframes pulseBlink {
-    0%, 100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.2;
-        transform: scale(1.1);
-    }
-}
-
         
-        /* Main Content */
-        .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4); /* Add this line */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Optional for soft shadow */
-}
-
-        
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: transparent;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: var(--primary);
-            border-left: 5px solid var(--secondary);
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        h3 {
-            color: var(--primary);
-            margin-top: 2rem;
-        }
-/* Slideshow and Notifications Wrapper */
-.slideshow-notification-wrapper {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 1rem;
-    background: rgb(255,255,200);
-    border-radius: 6px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-}
-
-/* Slideshow Section */
-.slideshow-section {
-    flex: 2;
-    min-width: 200px;
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.slideshow-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slideshow {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slideshow img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top; /* Focus on the top portion of images */
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-.slideshow img:first-child {
-    opacity: 1;
-}
-
-/* Mission Content Wrapper */
-.mission-content-wrapper {
-    width: 100%;
-    background: white;
-    padding: 1rem;
-}
-
-.mission-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}        /* Faculty Grid */
-        .faculty-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        /* Faculty Card Container */
-.faculty-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensures uniform card heights */
-}
-
-/* Image Wrapper */
-.faculty-img-wrapper {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 8px 8px 0 0;
-}
-
-/* Faculty Photo */
-.faculty-photo {
-    object-position: top center; /* Focus on faces */
-    height: 100%;
-    width: 100%;
-}
-/* Faculty Info Section */
-.faculty-info {
-    padding: 1.5rem;
-    text-align: center; /* Centers all text */
-    flex-grow: 1; /* Pushes content to align properly */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically centers content */
-}
-
-.faculty-name {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-}
-
-.faculty-title {
-    color: #666;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-        
-        /* SWOC Analysis */
-        .swoc-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .swoc-card {
-            padding: 1.5rem;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-        
-        .strength { border-top: 4px solid #28a745; }
-        .weakness { border-top: 4px solid #dc3545; }
-        .opportunity { border-top: 4px solid #17a2b8; }
-        .challenge { border-top: 4px solid #ffc107; }
-        
-        .swoc-card h4 {
-            margin-top: 0;
+        .slideshow-notification-wrapper {
             display: flex;
-            align-items: center;
-        }
-        
-        .swoc-card ul {
-            padding-left: 1.5rem;
-        }
-        
-        .swoc-card li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Student Corner */
-        .student-resources {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .resource-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .resource-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .drive-btn {
-            display: inline-block;
-            background: #4285F4;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .drive-btn:hover {
-            background: #3367D6;
-        }
-        
-        /* Calendar */
-        .calendar-container {
-            margin-top: 2rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
-        }
-        
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-        
-        .calendar-day {
-            padding: 0.5rem;
-            text-align: center;
-            border-radius: 4px;
-        }
-        
-        .calendar-day.heading {
-            font-weight: bold;
-            background: #f0f0f0;
-        }
-        
-        .event-day {
-            background: #e3f2fd;
-            position: relative;
-        }
-        
-        .event-day::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-        
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1rem;
-            margin-top: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: rgb(255,255,200);
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
         }
         
-        .gallery-item {
-            height: 200px;
+        .slideshow-section {
+            flex: 2;
+            min-width: 200px;
+            position: relative;
+            height: 300px;
             overflow: hidden;
             border-radius: 8px;
+        }
+        
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
             position: relative;
         }
         
-        .gallery-item img {
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .slideshow img {
+            position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s;
+            object-position: center top;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slideshow img:first-child {
+            opacity: 1;
         }
         
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        .notification-card {
+            flex: 1;
+            min-width: 260px;
+            background: rgb(242,240,230);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+            color: red;
         }
         
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
+        .notification-card.auto-scroll {
+            max-height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .notification-list {
+            list-style: none;
+            padding-left: 1rem;
+            margin: 0;
+            animation: scroll-up 15s linear infinite;
+        }
+        
+        .notification-list:hover {
+            animation-play-state: paused;
+        }
+        
+        .notification-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .notification-list li::before {
+            content: "🔔";
+            position: absolute;
+            left: 0;
+        }
+        
+        @keyframes scroll-up {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+        
+        .badge-new {
+            background: #FFD700;
+            color: red;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .blink-text {
+            font-size: 1.3rem;
+            color: #007BFF; /* Bright Blue */
+            animation: pulseBlink 8s ease-in-out infinite;
+            font-weight: 700;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            margin-top: 1rem;
+            display: inline-block;
         }
         
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
+        @keyframes pulseBlink {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.2;
+                transform: scale(1.1);
+            }
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Pinned notifications */
+        .pinned-notifications {
+            list-style: none;
+            padding-left: 1rem;
             margin-bottom: 1rem;
-            flex-wrap: wrap;
+            border-bottom: 1px solid #ccc;
         }
         
-        .footer-links a {
-            color: var(--secondary);
-            text-decoration: none;
+        .pinned-notifications li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.2rem;
         }
         
+        .pinned-notifications li::before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .notification-list li.pinned {
+            background: #fff8dc; /* light gold background */
+            border-left: 4px solid gold;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
@@ -577,774 +323,109 @@ h1 {
                 grid-template-columns: 1fr 1fr;
             }
         }
-.pinned-notifications {
-    list-style: none;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-}
-
-.pinned-notifications li {
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 1.2rem;
-}
-
-.pinned-notifications li::before {
-    content: "📌";
-    position: absolute;
-    left: 0;
-}
-.notification-list li.pinned {
-    background: #fff8dc; /* light gold background */
-    border-left: 4px solid gold;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-
     </style>
 </head>
 <script>
-    // Simple Background Slideshow
     document.addEventListener('DOMContentLoaded', function() {
-    // Slideshow functionality
-    const slides = document.querySelectorAll('.slideshow img');
-    let currentIndex = 0;
-    
-    if(slides.length > 0) slides[0].style.opacity = 1;
-    
-    setInterval(function() {
-        slides[currentIndex].style.opacity = 0;
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].style.opacity = 1;
-    }, 3000);
-
-    // Rest of your existing JavaScript...
-});
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentIndex = 0;
+        if(slides.length > 0) slides[0].style.opacity = 1;
+        setInterval(function() {
+            slides[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].style.opacity = 1;
+        }, 3000);
+    });
 </script>
 <body>
-<!-- Header -->
-<header>
-<div class="logo-container">
-<div class="logo-left">
-<img alt="Left Logo" src="4.jpg"/>
-</div>
-<div class="title-block">
-<h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
-<div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
-</div>
-<div class="logo-right">
-<img alt="Right Logo" src="2.jpg"/>
-</div>
-</div>
-<p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
-</header>
-<!-- Navigation -->
-<nav>
-<ul>
-<li><a href="#mission">Mission</a></li>
-<li><a href="#faculty">Faculty</a></li>
-<li><a href="#students">Student Corner</a></li>
-<li><a href="#swoc">SWOC</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#events">Events</a></li>
-<li><a href="#alumni">Alumni</a></li>
-<li><a href="#Archives">Archives</a></li>
-	<li><a href="#tribute">Tribute</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-<!-- Main Content -->
-<div class="container">
-<!-- Mission & Vision -->
-<section id="mission" style="padding: 0;">
-<!-- Slideshow and Notifications Row -->
-<div class="slideshow-notification-wrapper">
-<!-- Slideshow Section -->
-<div class="slideshow-section">
-<div class="slideshow-container">
-<div class="slideshow">
-<img alt="Dr. Sisir Kumar Rajbongshi" src="sikh.jpg"/>
-<img alt="Dr. Kshirod Sarmah" src="sem.jpg"/>
-<img alt="subhomoy" src="5th.jpg"/>
-<img alt="Dharmeswar Tarang" src="aw.jpg"/>
-<img alt="Dr. Rajdeep Ghosh" src="pic.jpg"/>
-<img alt="laboratory" src="lab.JPG"/>
-<img alt="seminar" src="su.jpg"/>
-<img alt="quiz" src="bro.jpg"/>
-<img alt="nep" src="nep.jpg"/>
-	<img alt="meg" src="meg.jpg"/>
-</div>
-</div>
-</div>
-<!-- Notifications Section -->
-<!-- Pinned Notifications (Always on Top) -->
-<!-- Scrolling Notifications -->
-<div class="notification-card auto-scroll">
-<ul class="notification-list">
-<!-- Pinned at Top -->
-<li class="pinned">
-<a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank">
-<strong>Class Routine:</strong> View the latest class schedule here
-            </a>
-<span class="badge-new">New</span>
-</li>
-<li class="pinned">
-<a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank">
-<strong>Syllabus:</strong> Download the updated syllabus for all semesters
-            </a>
-<span class="badge-new">New</span>
-</li>
-<!-- Rest of notifications -->
-<li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
-<li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
-<li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
-<li><strong>June 20, 2025:</strong> Internal Assessment begins</li>
-<li><strong>June 25, 2025:</strong> Summer vacation notice</li>
-</ul>
-</div>
-</div>
-</section></div>
-<!-- Mission & Vision Content -->
-<div class="mission-content-wrapper">
-<div class="mission-content">
-<h2><i class="fas fa-bullseye"></i> Our Mission &amp; Vision</h2>
-<div class="mv-card">
-<h3>Mission</h3>
-<p align="justify">To provide quality education in Computer Science that empowers students with technical skills, ethical values, and innovative thinking to meet global challenges while preserving local cultural identity.</p>
-</div>
-<div class="mv-card">
-<h3>Vision</h3>
-<p align="justify">To become a center of excellence in computer education and research in Northeast India, producing socially responsible professionals who contribute to technological advancement in Assam and beyond.</p>
-</div>
-</div>
-</div>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-left">
+                <img alt="Left Logo" src="4.jpg"/>
+            </div>
+            <div class="title-block">
+                <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
+                <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
+            </div>
+            <div class="logo-right">
+                <img alt="Right Logo" src="2.jpg"/>
+            </div>
+        </div>
+        <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+    </header>
 
-<!-- Faculty Section -->
-<section id="faculty">
-<h2><i class="fas fa-chalkboard-teacher"></i> Our Faculty</h2>
-<div class="faculty-grid">
-<!-- Dr. Sisir Kumar Rajbongshi -->
-<div class="faculty-card">
-<div class="faculty-img-wrapper">
-<img alt="Dr. Sisir Kumar Rajbongshi" class="faculty-photo" src="sisir.jpg"/>
-</div>
-<div class="faculty-info">
-<div class="faculty-name">Dr. Sisir Kumar Rajbongshi</div>
-<div class="faculty-title">Assistant Professor</div>
-<p>Specialization: Fuzzy Algebra, Data Mining</p>
-<a class="drive-btn" href="https://sisirrajbongshi.github.io/SISIR/" target="_blank">View Profile</a>
-</div>
-</div>
-<!-- Dr. Kshirod Sarmah -->
-<div class="faculty-card">
-<div class="faculty-img-wrapper">
-<img alt="Dr. Kshirod sarmah" class="faculty-photo" src="KS.jpg"/>
-</div>
-<div class="faculty-info">
-<div class="faculty-name">Dr. Kshirod Sarmah</div>
-<div class="faculty-title">Assistant Professor</div>
-<p>Specialization: Computer Networks, Signal Processing</p>
-<a class="drive-btn" href="https://kshirod178.github.io/Dr-Kshirod-Sarmah/" target="_blank">View Profile</a>
-</div>
-</div>
-<!-- Dharmeswar Tarang -->
-<div class="faculty-card">
-<div class="faculty-img-wrapper">
-<img alt="Dharmeswar tarang" class="faculty-photo" src="DT.jpg"/>
-</div>
-<div class="faculty-info">
-<div class="faculty-name">Dharmeswar Tarang (HoD)</div>
-<div class="faculty-title">Assistant Professor</div>
-<p>Specialization: Data Mining, Computer Network, AI</p>
-</div>
-</div>
-<!-- Dr. Rajdeep Ghosh -->
-<div class="faculty-card">
-<div class="faculty-img-wrapper">
-<img alt="Rajdeep Ghosh" class="faculty-photo" src="RG.jpg"/>
-</div>
-<div class="faculty-info">
-<div class="faculty-name">Dr Rajdeep Ghosh</div>
-<div class="faculty-title">Assistant Professor</div>
-<p>Specialization: Machine Learning, AI, Cloud Computing</p>
-</div>
-</div>
-<div class="faculty-card">
-<div class="faculty-img-wrapper">
-<img alt="Keleng" class="faculty-photo" src="NK.jpg"/>
-</div>
-<div class="faculty-info">
-<div class="faculty-name">Niranjan Keleng</div>
-<div class="faculty-title">Laboratory Bearer</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Student Corner -->
-<section id="students">
-<h2><i class="fas fa-user-graduate"></i> Student Corner</h2>
-<div class="student-resources">
-<!-- Old Question Papers -->
-<div class="resource-card">
-<div class="resource-icon">
-<i class="fas fa-file-alt"></i>
-</div>
-<h3>Question Papers</h3>
-<p>Access previous years' question papers to prepare for your exams</p>
-<a class="drive-btn" href="https://drive.google.com/drive/folders/1vMoI5Lq9IbOr1ZjGpihMzB4Iy21HoiuX?usp=drive_link" target="_blank">
-<i class="fab fa-google-drive"></i> Open Drive Folder
-                    </a>
-</div>
-<!-- Syllabus -->
-<div class="resource-card">
-<div class="resource-icon">
-<i class="fas fa-book"></i>
-</div>
-<h3>Syllabus</h3>
-<p>Download the latest syllabus for all semesters</p>
-<a class="drive-btn" href="https://drive.google.com/drive/folders/1pFUdauxfhRziKuvfK8gnTA1I_8sw-7zL?usp=drive_link" target="_blank">
-<i class="fab fa-google-drive"></i> Open Drive Folder
-                    </a>
-</div>
-<!-- Class Notes -->
-<div class="resource-card">
-<div class="resource-icon">
-<i class="fas fa-notes"></i>
-</div>
-<h3>Class Notes</h3>
-<p>Comprehensive notes for all subjects</p>
-<a class="drive-btn" href="https://drive.google.com/drive/folders/14tOddTXJsFs4oOJUfQrEmBJOIEBNz58G?usp=drive_link" target="_blank">
-<i class="fab fa-google-drive"></i> Open Drive Folder
-                    </a>
-</div>
-</div>
-<!-- Student Achievements -->
-<h3><i class="fas fa-star"></i> Notable Alumni Achievements</h3>
-<ul>
-<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
-<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
-<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
-<li><strong>Jinku Rabha</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Sanjeep Kachari</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Anupam Kumar Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Denish Sarma</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Julfikar Jitu Rahman</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Plaban Goswami</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Rami Kashyap Basumatary</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Bhanita Brahma</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Jagajit Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Kripa Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Ritumoni Banikya</strong> – B.Sc. 2nd Class → M.Sc.</li>
-<li><strong>Rashi Moni Talukdar</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Joy Prakash Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Suman Dip Khakhalary</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Pankaj Barman</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Rahat Islam</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Arpan Mandal</strong> – B.Sc. 1st Class → MCA</li>
-</ul>
-<h3><i class="fas fa-briefcase"></i> Employment Achievements</h3>
-<ul>
-<li><strong>Samudra Basumatary</strong> – B.Sc. 1st Class → Assistant Teacher</li>
-<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
-<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
-<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
-<li><strong>Nobodhol M Sangma</strong> – B.Sc. 1st Class → Assistant Teacher, Meghalaya</li>
-<li><strong>John Basumatary</strong> – Assam Police</li>
-<li><strong>David Barman</strong> – B.Sc. 1st Class → Cricket Player</li>
-</ul>
-</section>
-<!-- SWOC Analysis -->
-<section id="swoc">
-<h2><i class="fas fa-chart-pie"></i> SWOC Analysis</h2>
-<div class="swoc-container">
-<div class="swoc-card strength">
-<h4><i class="fas fa-check-circle"></i> Strengths</h4>
-<ul>
-<li>Only Department in Goalpara offering B.Sc. CS Honours</li>
-<li>All faculty positions filled with qualified staff</li>
-<li>Excellent undergraduate curriculum (GU CBCS)</li>
-<li>Well-furnished lab with 13 PCs + server</li>
-<li>Cooperative environment and collaboration</li>
-</ul>
-</div>
-<div class="swoc-card weakness">
-<h4><i class="fas fa-exclamation-triangle"></i> Weaknesses</h4>
-<ul>
-<li>No Internet/LAN facilities</li>
-<li>No trained lab technician</li>
-<li>No PG/PhD programs</li>
-<li>No dedicated department block</li>
-<li>Need additional computer lab</li>
-</ul>
-</div>
-<div class="swoc-card opportunity">
-<h4><i class="fas fa-lightbulb"></i> Opportunities</h4>
-<ul>
-<li>Build departmental block with advanced labs</li>
-<li>Collaborate with other institutions</li>
-<li>Increase enrollment in higher studies</li>
-<li>Promote computer literacy in region</li>
-</ul>
-</div>
-<div class="swoc-card challenge">
-<h4><i class="fas fa-road"></i> Challenges</h4>
-<ul>
-<li>Implement campus WiFi for ICT education</li>
-<li>Subscribe to scientific journals</li>
-<li>Motivate students to choose CS careers</li>
-<li>Secure research funding</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Events Calendar -->
-<section id="events">
-<!-- Upcoming Events Section -->
-<h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
-<div id="calendar"></div>
-<script>
-function generateCalendar(events) {
-    const calendarEl = document.getElementById('calendar');
-    const today = new Date();
-    const month = today.getMonth();
-    const year = today.getFullYear();
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="students.html">Student Corner</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="tribute.html">Tribute</a></li>
+	<li><a href="contact.html">contact</a></li>
 
-    const monthNames = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ];
 
-    let html = `<h3>${monthNames[month]} ${year}</h3>`;
-    html += `<table><thead><tr>
-        <th>Sun</th><th>Mon</th><th>Tue</th>
-        <th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-    </tr></thead><tbody>`;
 
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    let day = 1;
-    for (let i = 0; i < 6; i++) {
-        html += "<tr>";
-        for (let j = 0; j < 7; j++) {
-            if (i === 0 && j < firstDay) {
-                html += "<td></td>";
-            } else if (day > daysInMonth) {
-                html += "<td></td>";
-            } else {
-                const eventText = events[day] ? `<div class='event'>${events[day]}</div>` : "";
-                html += `<td>${day}${eventText}</td>`;
-                day++;
-            }
-        }
-        html += "</tr>";
-    }
-    html += "</tbody></table>";
-    calendarEl.innerHTML = html;
-}
 
-// Example current month events
-const events = {
-    5: "Guest Lecture",
-    12: "Project Submission",
-    20: "Quiz Competition"
-};
+        </ul>
+    </nav>
 
-generateCalendar(events);
-</script>
-<!-- Past Events Section -->
-<h3 style="margin-top:2rem;"><i class="fas fa-check-circle"></i> Past Events</h3>
-<ul class="event-list">
-<li><strong>Awareness Program – “Computer Science and its Future Scope”</strong><br/>
-        Venue: Rangjuli Higher Secondary School (24 June 2022)<br/>
-        Resource Persons: Dr Sisir Kumar Rajbongshi, Subhomoy Dey, Kshirod Sarmah
-    </li>
-<li><strong>Book Inauguration Program – “College Computer Science”</strong><br/>
-        Venue: Smart Class Room-1, PDUAM Amjonga<br/>
-        Author: Dr Kshirod Sarmah
-    </li>
-<li><strong>Industry Talk – “Computer Science in Corporate Sector”</strong><br/>
-        Speaker: Mr. Sudeep Dey, Lead Data Engineer, Lowe’s Technology, USA (22 October 2022)
-    </li>
-<li><strong>Lecture Series – “Importance of Computer Learning and Computer Science in Career Building”</strong><br/>
-        Speaker: Dr Manoj Deka, Assistant Professor, Bodoland University (27 June 2019)
-    </li>
-<li><strong>Talk – “Understanding Statistics”</strong><br/>
-        Speaker: Prof. Kishore Sinha, Ex-Dean, Birsa Agricultural University (6 October 2018)
-    </li>
-<li><strong>National Level e-Quiz – “Advances in Computer Science and Information Technology”</strong><br/>
-        (11–12 July 2020)
-    </li>
-<li><strong>Awareness Program – “Corona Virus”</strong><br/>
-        Venue: National Highway 37 (19 March 2020)
-    </li>
-<li><strong>Field Trip – Chanddubi</strong> (28 December 2020)</li>
-<li><strong>Field Trip – Ukiam</strong> (23 December 2021)</li>
-<li><strong>Cultural Rally – Annual College Week</strong> (18 February 2020 &amp; 12 September 2018)</li>
-<li><strong>MoU Signed – With Dudhnoi College</strong> (14 October 2022)</li>
-<li><strong>MoU Signed – With Rangjuli Higher Secondary School</strong> (20 May 2023)</li>
-<li><strong>Faculty Exchange Program – With Dudhnoi College</strong> (Date not specified)</li>
-<li><strong>Lecture Series – “Higher Studies Options in Computer Science”</strong><br/>
-        Speaker: Dr Rubul Kr Bania, NEHU (22 April 2022)
-    </li>
-<li><strong>Laboratory Visit – Amjonga High School</strong> (16 May 2023)</li>
-<li><strong>Inauguration of Certificate Course – “30 Hours Certificate Course in Computer Applications”</strong><br/>
-        (17–28 April 2023)
-    </li>
-<li><strong>Departmental Library Inauguration</strong> (6 December 2021)</li>
-</ul>
-<style>
-.event-list {
-    list-style: disc;
-    padding-left: 1.5rem;
-}
-.event-list li {
-    margin-bottom: 0.8rem;
-    line-height: 1.4;
-}
-.event-list strong {
-    color: var(--secondary);
-}
-#calendar {
-    margin-bottom: 1.5rem;
-}
-#calendar table {
-    width: 100%;
-    border-collapse: collapse;
-}
-#calendar th, #calendar td {
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 5px;
-}
-#calendar .event {
-    background: var(--secondary);
-    color: white;
-    font-size: 0.8rem;
-    margin-top: 4px;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-</style>
-</section>
-<!-- Department Gallery -->
-<section id="gallery">
-<h2><i class="fas fa-images"></i> Department Gallery: Some Scenes</h2>
-<div class="gallery">
-<div class="gallery-item">
-<img alt="Awareness Program" src="aw.jpg"/>
-</div>
-<div class="gallery-item">
-<img alt="Book Release" src="sem.jpg"/>
-</div>
-<div class="gallery-item">
-<img alt="Lab Visit" src="sikh.jpg"/>
-</div>
-<div class="gallery-item">
-<img alt="Industrial Talk" src="pic.jpg"/>
-</div>
-<div class="gallery-footer" style="text-align:center; margin-top:1rem;">
-<a class="drive-btn" href="https://drive.google.com/drive/folders/1rMMRmZjt2ddpokbBkVRF9oGXeKedt4hB?usp=drive_link" style="display:inline-flex; align-items:center;">
-<i class="fab fa-google-drive" style="margin-right:8px;"></i> 
-        View Full Gallery
-    </a>
-</div>
-</div>
-</section>
-<section id="alumni">
-<h2><i class="fas fa-users"></i> Alumni</h2>
-<p>Our alumni are the pride of the Department of Computer Science, contributing to academia, industry, and society across the globe.</p>
-<!-- Records -->
-<div class="student-resources">
-<div class="resource-card">
-<div class="resource-icon">
-<i class="fas fa-database"></i>
-</div>
-<h3>All Past Students Records</h3>
-<p>View comprehensive data of all our graduates since the inception of the department.</p>
-<a class="drive-btn" href="https://docs.google.com/spreadsheets/d/1BOsLqBGaPJfm05Gr_w1S-X4fMC2NXbyu/edit?usp=sharing" target="_blank">
-<i class="fab fa-google-drive"></i> Open Google Sheet
-            </a>
-</div>
-</div>
-<h3><i class="fas fa-star"></i> Higher Education Achievements</h3>
-<ul>
-<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
-<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
-<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
-<li><strong>Jinku Rabha</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Sanjeep Kachari</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Anupam Kumar Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Denish Sarma</strong> – B.Sc. 1st Class → MCA</li>
-<li><strong>Julfikar Jitu Rahman</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Plaban Goswami</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Rami Kashyap Basumatary</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Bhanita Brahma</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Jagajit Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Kripa Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Ritumoni Banikya</strong> – B.Sc. 2nd Class → M.Sc.</li>
-<li><strong>Rashi Moni Talukdar</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Joy Prakash Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Suman Dip Khakhalary</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Pankaj Barman</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Rahat Islam</strong> – B.Sc. 1st Class → M.Sc.</li>
-<li><strong>Arpan Mandal</strong> – B.Sc. 1st Class → MCA</li>
-</ul>
-<h3><i class="fas fa-briefcase"></i> Student's Employment Achievements</h3>
-<ul>
-<li><strong>Samudra Basumatary</strong> – B.Sc. 1st Class → Assistant Teacher</li>
-<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
-<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
-<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
-<li><strong>Nobodhol M Sangma</strong> – B.Sc. 1st Class → Assistant Teacher, Meghalaya</li>
-<li><strong>John Basumatary</strong> – Assam Police</li>
-<li><strong>David Barman</strong> – B.Sc. 1st Class → Cricket Player</li>
-</ul>
-</section>
-<!-- Department Records Section -->
-<section id="Archives">
-<h2><i class="fas fa-archive"></i>Departmental All Records</h2>
-<p>
-        The Department of Computer Science maintains detailed academic, administrative, and event records 
-        to ensure transparency and accessibility. These archives document our journey, milestones, and 
-        contributions to the field of education.
-    </p>
-<div class="student-resources">
-<div class="resource-card">
-<div class="resource-icon">
-<i class="fas fa-folder-open"></i>
-</div>
-<h3>Access Complete Department Records</h3>
-<p>Browse all official departmental records, including Class Routines, annual reports, program details, 
-               meeting documents, and activity archives.</p>
-<a class="drive-btn" href="https://drive.google.com/drive/folders/1KCbccXiT0jBQeYQx7k3e6qM2zAVzYH8M?usp=sharing" target="_blank">
-<i class="fab fa-google-drive"></i> View Records Folder
-            </a>
-</div>
-</div>
-</section>
-<!-- Tribute Section -->
-<section id="tribute" style="padding: 2rem; background-color: #f9f9f9;">
-    <div style="max-width: 800px; margin: auto; text-align: center;">
-        <h2 style="color: var(--secondary);">
-            <i class="fas fa-heart"></i> In Memory of Our Beloved Colleague
-        </h2>
-        <img src="suvo.jpg" alt="Subhomoy Dey" 
-             style="width: 200px; height: auto; border-radius: 50%; margin: 1rem 0;">
-        <p style="font-size: 1.1rem; line-height: 1.5;">
-            Our Department mourns the untimely loss of <strong>Mr. Subhomoy Dey</strong>,  
-            a respected faculty member whose dedication, knowledge, and kindness touched  
-            the lives of students and colleagues alike.  
-            In his memory, a souvenir was published to celebrate his life  
-            and contributions to the Computer Science Department. We would like to extend our heartfelt thanks to our most hardworking 
-			student, Ritumoni Banikya, for his outstanding effort and dedication in designing and serving as the editor of our souvenir. 
-			Also thanks to Kripa Rabha and CSc--2022-24 batch. Your hard work and creativity have truly made this project special.
-        </p>
-        <a href="https://drive.google.com/file/d/1bhYJ0nWF5mYczPZTM6OMCdvUPXnf68Jr/view?usp=sharing" 
-           target="_blank" class="btn" 
-           style="display: inline-block; background: var(--secondary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
-           View Souvenir
-        </a>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Mission & Vision -->
+        <section id="mission" style="padding: 0;">
+            <!-- Slideshow and Notifications Row -->
+            <div class="slideshow-notification-wrapper">
+                <!-- Slideshow Section -->
+                <div class="slideshow-section">
+                    <div class="slideshow-container">
+                        <div class="slideshow">
+                            <img alt="Dr. Sisir Kumar Rajbongshi" src="sikh.jpg"/>
+                            <img alt="Dr. Kshirod Sarmah" src="sem.jpg"/>
+                            <img alt="subhomoy" src="5th.jpg"/>
+                            <img alt="Dharmeswar Tarang" src="aw.jpg"/>
+                            <img alt="Dr. Rajdeep Ghosh" src="pic.jpg"/>
+                            <img alt="laboratory" src="lab.JPG"/>
+                            <img alt="seminar" src="su.jpg"/>
+                            <img alt="quiz" src="bro.jpg"/>
+                            <img alt="nep" src="nep.jpg"/>
+                            <img alt="meg" src="meg.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div class="notification-card auto-scroll">
+                    <ul class="notification-list">
+                        <!-- Pinned at Top -->
+                        <li class="pinned">
+                            <a href="https://drive.google.com/drive/folders/110jYEk1eGfrxcF3EcMJh9-QuYQDJeMJG?usp=sharing" target="_blank">
+                                <strong>Class Routine:</strong> View the latest class schedule here
+                            </a>
+                            <span class="badge-new">New</span>
+                        </li>
+                        <li class="pinned">
+                            <a href="https://drive.google.com/drive/folders/14CjyuJb6DAtywFV9AIpFjaCYRcA6Yapg?usp=sharing" target="_blank">
+                                <strong>Syllabus:</strong> Download the updated syllabus for all semesters
+                            </a>
+                            <span class="badge-new">New</span>
+                        </li>
+                        <!-- Rest of notifications -->
+                        <li><strong>June 5, 2025:</strong> Guest lecture on AI at 11:00 AM <span class="badge-new">New</span></li>
+                        <li><strong>June 10, 2025:</strong> Last date to submit project proposals</li>
+                        <li><strong>June 15, 2025:</strong> Coding contest registration deadline <span class="badge-new">New</span></li>
+                        <li><strong>June 20, 2025:</strong> Internal Assessment begins</li>
+                        <li><strong>June 25, 2025:</strong> Summer vacation notice</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-
-
-
-
-	
-<!-- Contact Section -->
-<section id="contact">
-<h2><i class="fas fa-envelope"></i> Contact Us</h2>
-<p><strong>Department of Computer Science</strong><br/>
-            PDUAM, Amjonga<br/>
-            Goalpara, Assam - 783121</p>
-<p><i class="fas fa-phone"></i> +91 97077 21185<br/>
-<i class="fas fa-envelope"></i> csdept@pduamamjonga.ac.in</p>
-</section>
-
-<!-- Footer -->
-<footer>
-<div class="footer-links">
-<a href="https://pduamamjonga.ac.in" target="_blank">College Website</a>
-<a href="https://facebook.com/profile.php?id=100083022567984" target="_blank">Facebook Page</a>
-<a href="#contact">Contact Us</a>
-<a href="#students">Student Corner</a>
-</div>
-<p>© website designed by: Dr Sisir Kr Rajbongshi on behalf of Department of Computer Science, PDUAM, Amjonga</p>
-<p>Goalpara, Assam - 783124 | Email: csdept@pduamamjonga.ac.in | Phone: +91 7002234501/9401800625/7896482942/9085577988/p&gt;
-    </p></footer>
-<script>
-        // Calendar Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Highlight current day
-            const today = new Date();
-            if (today.getMonth() === 10) { // November
-                const days = document.querySelectorAll('.calendar-day');
-                days.forEach(day => {
-                    if (parseInt(day.textContent) === today.getDate()) {
-                        day.style.backgroundColor = '#e3f2fd';
-                        day.style.fontWeight = 'bold';
-                    }
-                });
-            }
-            
-            // Simple event tooltips
-            const eventDays = document.querySelectorAll('.event-day');
-            eventDays.forEach(day => {
-                day.addEventListener('mouseover', function() {
-                    const tooltip = this.querySelector('.event-tooltip');
-                    if (tooltip) tooltip.style.visibility = 'visible';
-                });
-                day.addEventListener('mouseout', function() {
-                    const tooltip = this.querySelector('.event-tooltip');
-                    if (tooltip) tooltip.style.visibility = 'hidden';
-                });
-            });
-        });
-    </script>
-<!-- Other content above -->
-<style>
-@media (max-width: 768px) {
-    /* Make cards stack vertically */
-    .student-resources, 
-    .resource-card, 
-    .alumni-section,
-    .gallery-section {
-        display: block !important;
-        width: 100% !important;
-        margin: 0 auto 1rem auto;
-    }
-
-    /* Make text more readable */
-    body {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    /* Reduce heading size slightly for mobile */
-    h1, h2, h3 {
-        font-size: 90%;
-    }
-
-    /* Make buttons full-width */
-    .drive-btn, .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 8px;
-    }
-
-    /* Calendar: allow horizontal scroll */
-    #calendar table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    /* Images: scale down to fit screen */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-</style>
-<style>
-@media (max-width: 768px) {
-    /* Make cards stack vertically */
-    .student-resources, 
-    .resource-card, 
-    .alumni-section,
-    .gallery-section {
-        display: block !important;
-        width: 100% !important;
-        margin: 0 auto 1rem auto;
-    }
-
-    /* Make text more readable */
-    body {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    /* Reduce heading size slightly for mobile */
-    h1, h2, h3 {
-        font-size: 90%;
-    }
-
-    /* Make buttons full-width */
-    .drive-btn, .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 8px;
-    }
-
-    /* Calendar: allow horizontal scroll */
-    #calendar table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    /* Images: scale down to fit screen */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Navigation: stack vertically on small screens */
-    nav ul {
-        display: block !important;
-        padding: 0;
-    }
-    nav ul li {
-        display: block !important;
-        margin-bottom: 0.5rem;
-    }
-}
-</style>
-<!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTop">↑</button>
-	<script>
-window.onscroll = function() {
-    document.getElementById("backToTop").style.display = 
-        (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
-};
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
-
-	<style>
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: var(--secondary);
-  color: white;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
-}
-#backToTop:hover {
-  background-color: #333;
-}
-</style>
-
 </body>
 </html>
-
-
-
-
