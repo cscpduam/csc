@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="N5sOGfr399lk6qi9VwQrIiEu5M3uosbvp5XSkTGzeZU" name="google-site-verification"/>
+    <meta content="Official website of the Department of Computer Science, PDUAM Amjonga. Explore academic programs, faculty, events, and more." name="description"/>
+    <meta content="Computer Science, PDUAM, Amjonga, Assam College, Department Website" name="keywords"/>
+    <meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
+    <title>Student Corner | Department of Computer Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link as="image" href="sikh.jpg" rel="preload"/>
+    <link as="image" href="sem.jpg" rel="preload"/>
+    <link as="image" href="aw.jpg" rel="preload"/>
+    <link as="image" href="pic.jpg" rel="preload"/>
+    <link as="image" href="5th.jpg" rel="preload"/>
+    <link as="image" href="meg.jpg" rel="preload"/>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #DAA520;
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --assam-red: #FF5733;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.1;
+            background-color: #e9eff6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1rem 0.3rem;
+            border-bottom: 8px solid var(--secondary);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            height: 60px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow:
+                0 2px 0 #fff,
+                0 3px 0 #FF0000,
+                0 4px 0 #FFD700,
+                0 5px 10px rgba(0,0,0,0.2);
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0;
+            transform: perspective(500px) rotateX(10deg);
+            text-align: center;
+            letter-spacing: 1px;
+            animation:
+                glow 2s ease-in-out infinite alternate,
+                pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: perspective(500px) rotateX(10deg) scale(1);
+            }
+            50% {
+                transform: perspective(500px) rotateX(10deg) scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                animation:
+                    glow 2s ease-in-out infinite alternate,
+                    pulse 3s ease-in-out infinite;
+            }
+        }
+        .department-name {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+
+        /* Student Resources Section */
+        .student-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .resource-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+            text-align: center;
+        }
+        .resource-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        .resource-card h3 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .department-name {
+                font-size: 1.4rem;
+            }
+
+            .faculty-grid, .student-resources, .swoc-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <div class="logo-left">
+            <img alt="Left Logo" src="4.jpg"/>
+        </div>
+        <div class="title-block">
+            <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
+            <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
+        </div>
+        <div class="logo-right">
+            <img alt="Right Logo" src="2.jpg"/>
+        </div>
+    </div>
+    <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+</header>
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="students.html">Student Corner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#alumni">Alumni</a></li>
+        <li><a href="index.html#Archives">Archives</a></li>
+        <li><a href="index.html#tribute">Tribute</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<!-- Main Content -->
+<div class="container">
+   <section id="students">
+<h2><i class="fas fa-user-graduate"></i> Student Corner</h2>
+<div class="student-resources">
+<!-- Old Question Papers -->
+<div class="resource-card">
+<div class="resource-icon">
+<i class="fas fa-file-alt"></i>
+</div>
+<h3>Question Papers</h3>
+<p>Access previous years' question papers to prepare for your exams</p>
+<a class="drive-btn" href="https://drive.google.com/drive/folders/1vMoI5Lq9IbOr1ZjGpihMzB4Iy21HoiuX?usp=drive_link" target="_blank">
+<i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+</div>
+<!-- Syllabus -->
+<div class="resource-card">
+<div class="resource-icon">
+<i class="fas fa-book"></i>
+</div>
+<h3>Syllabus</h3>
+<p>Download the latest syllabus for all semesters</p>
+<a class="drive-btn" href="https://drive.google.com/drive/folders/1pFUdauxfhRziKuvfK8gnTA1I_8sw-7zL?usp=drive_link" target="_blank">
+<i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+</div>
+<!-- Class Notes -->
+<div class="resource-card">
+<div class="resource-icon">
+<i class="fas fa-notes"></i>
+</div>
+<h3>Class Notes</h3>
+<p>Comprehensive notes for all subjects</p>
+<a class="drive-btn" href="https://drive.google.com/drive/folders/14tOddTXJsFs4oOJUfQrEmBJOIEBNz58G?usp=drive_link" target="_blank">
+<i class="fab fa-google-drive"></i> Open Drive Folder
+                    </a>
+</div>
+</div>
+<!-- Student Achievements -->
+<h3><i class="fas fa-star"></i> Notable Alumni Achievements</h3>
+<ul>
+<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
+<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
+<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
+<li><strong>Jinku Rabha</strong> – B.Sc. 1st Class → MCA</li>
+<li><strong>Sanjeep Kachari</strong> – B.Sc. 1st Class → MCA</li>
+<li><strong>Anupam Kumar Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Denish Sarma</strong> – B.Sc. 1st Class → MCA</li>
+<li><strong>Julfikar Jitu Rahman</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Plaban Goswami</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Rami Kashyap Basumatary</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Bhanita Brahma</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Jagajit Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Kripa Rabha</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Ritumoni Banikya</strong> – B.Sc. 2nd Class → M.Sc.</li>
+<li><strong>Rashi Moni Talukdar</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Joy Prakash Nath</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Suman Dip Khakhalary</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Pankaj Barman</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Rahat Islam</strong> – B.Sc. 1st Class → M.Sc.</li>
+<li><strong>Arpan Mandal</strong> – B.Sc. 1st Class → MCA</li>
+</ul>
+<h3><i class="fas fa-briefcase"></i> Employment Achievements</h3>
+<ul>
+<li><strong>Samudra Basumatary</strong> – B.Sc. 1st Class → Assistant Teacher</li>
+<li><strong>Sourabh Ghose</strong> – B.Sc. 1st Class → MCA → UI/UX Developer</li>
+<li><strong>Lwithw J Kachari</strong> – B.Sc. 1st Class → MCA → Web Developer</li>
+<li><strong>Dhanjyoti Nath</strong> – B.Sc. 1st Class → M.Sc. → Laboratory Assistant, Cotton University</li>
+<li><strong>Nobodhol M Sangma</strong> – B.Sc. 1st Class → Assistant Teacher, Meghalaya</li>
+<li><strong>John Basumatary</strong> – Assam Police</li>
+<li><strong>David Barman</strong> – B.Sc. 1st Class → Cricket Player</li>
+</ul>
+</section>
+
+</div>
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="https://pduexamjonga.in/" target="_blank">College Website</a>
+        <a href="mailto:cs@pduexamjonga.in">Email Us</a>
+        <a href="https://maps.app.goo.gl/yFk7a2y6C2f5H5dE9" target="_blank">Locate Us</a>
+    </div>
+    <p>&copy; 2024 Department of Computer Science. All Rights Reserved.</p>
+    <p>Developed By <a href="https://sisirrajbongshi.github.io/SISIR/" target="_blank">Dr. Sisir Kumar Rajbongshi</a></p>
+</footer>
+</body>
+</html>

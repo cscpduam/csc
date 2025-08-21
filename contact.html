@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="Official website of the Department of Computer Science, PDUAM Amjonga. Explore academic programs, faculty, events, and more." name="description"/>
+    <meta content="Computer Science, PDUAM, Amjonga, Assam College, Department Website" name="keywords"/>
+    <meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
+    <title>Department of Computer Science | PDUAM, Amjonga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Preload images to improve loading speed -->
+    <link as="image" href="sikh.jpg" rel="preload"/>
+    <link as="image" href="sem.jpg" rel="preload"/>
+    <link as="image" href="5th.jpg" rel="preload"/>
+    <link as="image" href="aw.jpg" rel="preload"/>
+    <link as="image" href="pic.jpg" rel="preload"/>
+    <link as="image" href="lab.JPG" rel="preload"/>
+    <link as="image" href="su.jpg" rel="preload"/>
+    <link as="image" href="bro.jpg" rel="preload"/>
+    <link as="image" href="nep.jpg" rel="preload"/>
+    <link as="image" href="meg.jpg" rel="preload"/>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #DAA520;
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --assam-red: #FF5733;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.1;
+            background-color: #e9eff6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1rem 0.3rem;
+            border-bottom: 8px solid var(--secondary);
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo-container img {
+            height: 60px;
+        }
+ 
+        /* 3D and Animation for H1 */
+        h1 {
+            font-size: 3rem;
+            text-shadow: 
+                0 2px 0 #fff,
+                0 3px 0 #FF0000,
+                0 4px 0 #FFD700,
+                0 5px 10px rgba(0,0,0,0.2);
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0;
+            transform: perspective(500px) rotateX(10deg);
+            text-align: center;
+            letter-spacing: 1px;
+            animation: 
+                glow 2s ease-in-out infinite alternate,
+                pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: perspective(500px) rotateX(10deg) scale(1);
+            }
+            50% {
+                transform: perspective(500px) rotateX(10deg) scale(1.05);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                animation: 
+                    glow 2s ease-in-out infinite alternate,
+                    pulse 3s ease-in-out infinite;
+            }
+        }        
+        .department-name {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .slideshow-notification-wrapper {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: rgb(255,255,200);
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        }
+        
+        .slideshow-section {
+            flex: 2;
+            min-width: 200px;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slideshow img:first-child {
+            opacity: 1;
+        }
+        
+        .notification-card {
+            flex: 1;
+            min-width: 260px;
+            background: rgb(242,240,230);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+            color: red;
+        }
+        
+        .notification-card.auto-scroll {
+            max-height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .notification-list {
+            list-style: none;
+            padding-left: 1rem;
+            margin: 0;
+            animation: scroll-up 15s linear infinite;
+        }
+        
+        .notification-list:hover {
+            animation-play-state: paused;
+        }
+        
+        .notification-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .notification-list li::before {
+            content: "🔔";
+            position: absolute;
+            left: 0;
+        }
+        
+        @keyframes scroll-up {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+        
+        .badge-new {
+            background: #FFD700;
+            color: red;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .blink-text {
+            font-size: 1.3rem;
+            color: #007BFF; /* Bright Blue */
+            animation: pulseBlink 8s ease-in-out infinite;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+        
+        @keyframes pulseBlink {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.2;
+                transform: scale(1.1);
+            }
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Pinned notifications */
+        .pinned-notifications {
+            list-style: none;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .pinned-notifications li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        
+        .pinned-notifications li::before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .notification-list li.pinned {
+            background: #fff8dc; /* light gold background */
+            border-left: 4px solid gold;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .department-name {
+                font-size: 1.4rem;
+            }
+            
+            .faculty-grid, .student-resources, .swoc-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentIndex = 0;
+        if(slides.length > 0) slides[0].style.opacity = 1;
+        setInterval(function() {
+            slides[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].style.opacity = 1;
+        }, 3000);
+    });
+</script>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-left">
+                <img alt="Left Logo" src="4.jpg"/>
+            </div>
+            <div class="title-block">
+                <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
+                <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
+            </div>
+            <div class="logo-right">
+                <img alt="Right Logo" src="2.jpg"/>
+            </div>
+        </div>
+        <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="students.html">Student Corner</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="tribute.html">Tribute</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Mission & Vision -->
+       <section id="contact">
+<h2><i class="fas fa-envelope"></i> Contact Us</h2>
+<p><strong>Department of Computer Science</strong><br/>
+            PDUAM, Amjonga<br/>
+            Goalpara, Assam - 783121</p>
+<p><i class="fas fa-phone"></i> +91 97077 21185<br/>
+<i class="fas fa-envelope"></i> csdept@pduamamjonga.ac.in</p>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-links">
+<a href="https://pduamamjonga.ac.in" target="_blank">College Website</a>
+<a href="https://facebook.com/profile.php?id=100083022567984" target="_blank">Facebook Page</a>
+<a href="#contact">Contact Us</a>
+<a href="#students">Student Corner</a>
+</div>
+<p>© website designed by: Dr Sisir Kr Rajbongshi on behalf of Department of Computer Science, PDUAM, Amjonga</p>
+<p>Goalpara, Assam - 783124 | Email: csdept@pduamamjonga.ac.in | Phone: +91 7002234501/9401800625/7896482942/9085577988/p&gt;
+    </p></footer>
+<script>
+        // Calendar Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight current day
+            const today = new Date();
+            if (today.getMonth() === 10) { // November
+                const days = document.querySelectorAll('.calendar-day');
+                days.forEach(day => {
+                    if (parseInt(day.textContent) === today.getDate()) {
+                        day.style.backgroundColor = '#e3f2fd';
+                        day.style.fontWeight = 'bold';
+                    }
+                });
+            }
+            
+            // Simple event tooltips
+            const eventDays = document.querySelectorAll('.event-day');
+            eventDays.forEach(day => {
+                day.addEventListener('mouseover', function() {
+                    const tooltip = this.querySelector('.event-tooltip');
+                    if (tooltip) tooltip.style.visibility = 'visible';
+                });
+                day.addEventListener('mouseout', function() {
+                    const tooltip = this.querySelector('.event-tooltip');
+                    if (tooltip) tooltip.style.visibility = 'hidden';
+                });
+            });
+        });
+    </script>
+<!-- Other content above -->
+<style>
+@media (max-width: 768px) {
+    /* Make cards stack vertically */
+    .student-resources, 
+    .resource-card, 
+    .alumni-section,
+    .gallery-section {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto 1rem auto;
+    }
+
+    /* Make text more readable */
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Reduce heading size slightly for mobile */
+    h1, h2, h3 {
+        font-size: 90%;
+    }
+
+    /* Make buttons full-width */
+    .drive-btn, .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Calendar: allow horizontal scroll */
+    #calendar table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Images: scale down to fit screen */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+</style>
+<style>
+@media (max-width: 768px) {
+    /* Make cards stack vertically */
+    .student-resources, 
+    .resource-card, 
+    .alumni-section,
+    .gallery-section {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto 1rem auto;
+    }
+
+    /* Make text more readable */
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Reduce heading size slightly for mobile */
+    h1, h2, h3 {
+        font-size: 90%;
+    }
+
+    /* Make buttons full-width */
+    .drive-btn, .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Calendar: allow horizontal scroll */
+    #calendar table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Images: scale down to fit screen */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Navigation: stack vertically on small screens */
+    nav ul {
+        display: block !important;
+        padding: 0;
+    }
+    nav ul li {
+        display: block !important;
+        margin-bottom: 0.5rem;
+    }
+}
+</style>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTop">↑</button>
+	<script>
+window.onscroll = function() {
+    document.getElementById("backToTop").style.display = 
+        (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+};
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+	<style>
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#backToTop:hover {
+  background-color: #333;
+}
+</style>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="N5sOGfr399lk6qi9VwQrIiEu5M3uosbvp5XSkTGzeZU" name="google-site-verification"/>
+    <meta content="Official website of the Department of Computer Science, PDUAM Amjonga. Explore academic programs, faculty, events, and more." name="description"/>
+    <meta content="Computer Science, PDUAM, Amjonga, Assam College, Department Website" name="keywords"/>
+    <meta content="Department of Computer Science, PDUAM Amjonga" name="author"/>
+    <title>Events | Department of Computer Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Hind+Siliguri:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link as="image" href="sikh.jpg" rel="preload"/>
+    <link as="image" href="sem.jpg" rel="preload"/>
+    <link as="image" href="aw.jpg" rel="preload"/>
+    <link as="image" href="pic.jpg" rel="preload"/>
+    <link as="image" href="5th.jpg" rel="preload"/>
+    <link as="image" href="meg.jpg" rel="preload"/>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #DAA520;
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --assam-red: #FF5733;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.1;
+            background-color: #e9eff6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1rem 0.3rem;
+            border-bottom: 8px solid var(--secondary);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            height: 60px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow:
+                0 2px 0 #fff,
+                0 3px 0 #FF0000,
+                0 4px 0 #FFD700,
+                0 5px 10px rgba(0,0,0,0.2);
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0;
+            transform: perspective(500px) rotateX(10deg);
+            text-align: center;
+            letter-spacing: 1px;
+            animation:
+                glow 2s ease-in-out infinite alternate,
+                pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: perspective(500px) rotateX(10deg) scale(1);
+            }
+            50% {
+                transform: perspective(500px) rotateX(10deg) scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                animation:
+                    glow 2s ease-in-out infinite alternate,
+                    pulse 3s ease-in-out infinite;
+            }
+        }
+        .department-name {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+
+        /* Event Cards */
+        .event-card {
+            display: flex;
+            background: var(--light);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .event-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .event-card-image {
+            flex: 0 0 30%;
+            overflow: hidden;
+        }
+        .event-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .event-card-image img:hover {
+            transform: scale(1.05);
+        }
+        .event-card-content {
+            padding: 1.5rem;
+            flex: 1;
+        }
+        .event-card-content h3 {
+            margin-top: 0;
+        }
+        .event-card-content p {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .event-card {
+                flex-direction: column;
+            }
+            .event-card-image {
+                flex: none;
+                height: 200px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .department-name {
+                font-size: 1.4rem;
+            }
+
+            .faculty-grid, .student-resources, .swoc-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <div class="logo-left">
+            <img alt="Left Logo" src="4.jpg"/>
+        </div>
+        <div class="title-block">
+            <h1>কম্পিউটাৰ বিজ্ঞান বিভাগলৈ স্বাগতম</h1>
+            <div class="department-name">Department of Computer Science, PDUAM, Amjonga</div>
+        </div>
+        <div class="logo-right">
+            <img alt="Right Logo" src="2.jpg"/>
+        </div>
+    </div>
+    <p class="blink-text">প্রযুক্তিৰ পোহৰেৰে উদ্ভাসিত পৃথিবী</p>
+</header>
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="students.html">Student Corner</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="archives.html">Archives</a></li>
+        <li><a href="tribute.html">Tribute</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<!-- Main Content -->
+<div class="container">
+    <section id="upcoming-events">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+        <div class="event-card">
+            <div class="event-card-image">
+                <img src="https://placehold.co/300x200/DAA520/FFF?text=Workshop+Image" alt="Workshop on AI">
+            </div>
+            <div class="event-card-content">
+                <h3>Workshop on AI & Machine Learning</h3>
+                <p><strong>Date:</strong> 25th May, 2024</p>
+                <p><strong>Time:</strong> 10:00 AM onwards</p>
+                <p>Join us for an interactive workshop on the latest trends in Artificial Intelligence and Machine Learning. The event will feature a guest lecture and a hands-on coding session.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <div class="event-card-image">
+                <img src="https://placehold.co/300x200/2C3E50/FFF?text=Seminar+Image" alt="Seminar on Data Science">
+            </div>
+            <div class="event-card-content">
+                <h3>National Seminar on Data Science</h3>
+                <p><strong>Date:</strong> 10th June, 2024</p>
+                <p><strong>Time:</strong> 11:00 AM onwards</p>
+                <p>The department is organizing a national-level seminar on the role of Data Science in modern society. Experts from academia and industry will be presenting their research.</p>
+            </div>
+        </div>
+    </section>
+
+   <section id="events">
+<!-- Upcoming Events Section -->
+<h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+<div id="calendar"></div>
+<script>
+function generateCalendar(events) {
+    const calendarEl = document.getElementById('calendar');
+    const today = new Date();
+    const month = today.getMonth();
+    const year = today.getFullYear();
+
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    let html = `<h3>${monthNames[month]} ${year}</h3>`;
+    html += `<table><thead><tr>
+        <th>Sun</th><th>Mon</th><th>Tue</th>
+        <th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+    </tr></thead><tbody>`;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    let day = 1;
+    for (let i = 0; i < 6; i++) {
+        html += "<tr>";
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay) {
+                html += "<td></td>";
+            } else if (day > daysInMonth) {
+                html += "<td></td>";
+            } else {
+                const eventText = events[day] ? `<div class='event'>${events[day]}</div>` : "";
+                html += `<td>${day}${eventText}</td>`;
+                day++;
+            }
+        }
+        html += "</tr>";
+    }
+    html += "</tbody></table>";
+    calendarEl.innerHTML = html;
+}
+
+// Example current month events
+const events = {
+    5: "Guest Lecture",
+    12: "Project Submission",
+    20: "Quiz Competition"
+};
+
+generateCalendar(events);
+</script>
+<!-- Past Events Section -->
+<h3 style="margin-top:2rem;"><i class="fas fa-check-circle"></i> Past Events</h3>
+<ul class="event-list">
+<li><strong>Awareness Program – “Computer Science and its Future Scope”</strong><br/>
+        Venue: Rangjuli Higher Secondary School (24 June 2022)<br/>
+        Resource Persons: Dr Sisir Kumar Rajbongshi, Subhomoy Dey, Kshirod Sarmah
+    </li>
+<li><strong>Book Inauguration Program – “College Computer Science”</strong><br/>
+        Venue: Smart Class Room-1, PDUAM Amjonga<br/>
+        Author: Dr Kshirod Sarmah
+    </li>
+<li><strong>Industry Talk – “Computer Science in Corporate Sector”</strong><br/>
+        Speaker: Mr. Sudeep Dey, Lead Data Engineer, Lowe’s Technology, USA (22 October 2022)
+    </li>
+<li><strong>Lecture Series – “Importance of Computer Learning and Computer Science in Career Building”</strong><br/>
+        Speaker: Dr Manoj Deka, Assistant Professor, Bodoland University (27 June 2019)
+    </li>
+<li><strong>Talk – “Understanding Statistics”</strong><br/>
+        Speaker: Prof. Kishore Sinha, Ex-Dean, Birsa Agricultural University (6 October 2018)
+    </li>
+<li><strong>National Level e-Quiz – “Advances in Computer Science and Information Technology”</strong><br/>
+        (11–12 July 2020)
+    </li>
+<li><strong>Awareness Program – “Corona Virus”</strong><br/>
+        Venue: National Highway 37 (19 March 2020)
+    </li>
+<li><strong>Field Trip – Chanddubi</strong> (28 December 2020)</li>
+<li><strong>Field Trip – Ukiam</strong> (23 December 2021)</li>
+<li><strong>Cultural Rally – Annual College Week</strong> (18 February 2020 &amp; 12 September 2018)</li>
+<li><strong>MoU Signed – With Dudhnoi College</strong> (14 October 2022)</li>
+<li><strong>MoU Signed – With Rangjuli Higher Secondary School</strong> (20 May 2023)</li>
+<li><strong>Faculty Exchange Program – With Dudhnoi College</strong> (Date not specified)</li>
+<li><strong>Lecture Series – “Higher Studies Options in Computer Science”</strong><br/>
+        Speaker: Dr Rubul Kr Bania, NEHU (22 April 2022)
+    </li>
+<li><strong>Laboratory Visit – Amjonga High School</strong> (16 May 2023)</li>
+<li><strong>Inauguration of Certificate Course – “30 Hours Certificate Course in Computer Applications”</strong><br/>
+        (17–28 April 2023)
+    </li>
+<li><strong>Departmental Library Inauguration</strong> (6 December 2021)</li>
+</ul>
+<style>
+.event-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+.event-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+.event-list strong {
+    color: var(--secondary);
+}
+#calendar {
+    margin-bottom: 1.5rem;
+}
+#calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#calendar th, #calendar td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+}
+#calendar .event {
+    background: var(--secondary);
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+</style>
+</section>
+
+</div>
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="https://pduexamjonga.in/" target="_blank">College Website</a>
+        <a href="mailto:cs@pduexamjonga.in">Email Us</a>
+        <a href="https://maps.app.goo.gl/yFk7a2y6C2f5H5dE9" target="_blank">Locate Us</a>
+    </div>
+    <p>&copy; 2024 Department of Computer Science. All Rights Reserved.</p>
+    <p>Developed By <a href="https://sisirrajbongshi.github.io/SISIR/" target="_blank">Dr. Sisir Kumar Rajbongshi</a></p>
+</footer>
+</body>
+</html>
