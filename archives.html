@@ -17,26 +17,103 @@
     <link as="image" href="5th.jpg" rel="preload"/>
     <link as="image" href="meg.jpg" rel="preload"/>
      <style>
-    :root {
-      --primary: #2C3E50;
-      --secondary: #1ABC9C;
-      --light-bg: #f8f9fa;
-    }
+   :root {
+            --primary: #2C3E50;
+            --secondary: #DAA520;
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --assam-red: #FF5733;
+  body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.1;
+            background-color: #e9eff6;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--light-bg);
-      color: #333;
-    }
+  header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1rem 0.3rem;
+            border-bottom: 8px solid var(--secondary);
+        }
+  .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
+        .logo-container img {
+            height: 60px;
+        }
+  h1 {
+            font-size: 3rem;
+            text-shadow:
+                0 2px 0 #fff,
+                0 3px 0 #FF0000,
+                0 4px 0 #FFD700,
+                0 5px 10px rgba(0,0,0,0.2);
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            margin: 0.5rem 0;
+            transform: perspective(500px) rotateX(10deg);
+            text-align: center;
+            letter-spacing: 1px;
+            animation:
+                glow 2s ease-in-out infinite alternate,
+                pulse 3s ease-in-out infinite;
+        }
+ .department-name {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
 
     main {
       max-width: 1100px;
@@ -230,6 +307,7 @@
 
 </body>
 </html>
+
 
 
 
