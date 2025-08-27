@@ -16,212 +16,114 @@
     <link as="image" href="pic.jpg" rel="preload"/>
     <link as="image" href="5th.jpg" rel="preload"/>
     <link as="image" href="meg.jpg" rel="preload"/>
-    <style>
-        :root {
-            --primary: #2C3E50;
-            --secondary: #DAA520;
-            --accent: #28a745;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --assam-red: #FF5733;
-        }
+     <style>
+    :root {
+      --primary: #2C3E50;
+      --secondary: #1ABC9C;
+      --light-bg: #f8f9fa;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.1;
-            background-color: #e9eff6;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light-bg);
+      color: #333;
+    }
 
-        /* Header */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('3.jpg');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 1rem 0.3rem;
-            border-bottom: 8px solid var(--secondary);
-        }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-        .logo-container img {
-            height: 60px;
-        }
+    /* Section Heading */
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      position: relative;
+    }
+    h2 i {
+      margin-right: 8px;
+      color: var(--secondary);
+    }
 
-        h1 {
-            font-size: 3rem;
-            text-shadow:
-                0 2px 0 #fff,
-                0 3px 0 #FF0000,
-                0 4px 0 #FFD700,
-                0 5px 10px rgba(0,0,0,0.2);
-            color: #FFD700;
-            position: relative;
-            display: inline-block;
-            margin: 0.5rem 0;
-            transform: perspective(500px) rotateX(10deg);
-            text-align: center;
-            letter-spacing: 1px;
-            animation:
-                glow 2s ease-in-out infinite alternate,
-                pulse 3s ease-in-out infinite;
-        }
+    /* Resource Cards */
+    .student-resources {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: perspective(500px) rotateX(10deg) scale(1);
-            }
-            50% {
-                transform: perspective(500px) rotateX(10deg) scale(1.05);
-            }
-        }
+    .resource-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-                animation:
-                    glow 2s ease-in-out infinite alternate,
-                    pulse 3s ease-in-out infinite;
-            }
-        }
-        .department-name {
-            font-family: 'Hind Siliguri', sans-serif;
-            font-size: 1.8rem;
-            color: var(--secondary);
-        }
+    .resource-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
 
-        /* Navigation */
-        nav {
-            background: var(--primary);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    .resource-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
+    .drive-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-        nav li {
-            margin: 0 0.5rem;
-        }
+    .drive-btn i {
+      margin-right: 6px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
+    .drive-btn:hover {
+      opacity: 0.9;
+    }
 
-        nav a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
+    /* Special colors */
+    .drive-btn {
+      background: #34A853;
+      color: #fff;
+    }
+    .drive-btn[href*="acrobat"] {
+      background: #E63946; /* Red for PDF */
+    }
+    .drive-btn[href*="docs.google.com"] {
+      background: #4285F4; /* Blue for Docs */
+    }
 
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            background: linear-gradient(to bottom right, #f0f4f8, #dbe9f4);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        }
-
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: transparent;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: var(--primary);
-            border-left: 5px solid var(--secondary);
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            color: var(--primary);
-            margin-top: 2rem;
-        }
-
-        /* Archive List */
-        .archive-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .archive-list li {
-            background: var(--light);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .archive-list li a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .archive-list li a:hover {
-            color: var(--secondary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .department-name {
-                font-size: 1.4rem;
-            }
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: #fff;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
 <!-- Header -->
@@ -254,68 +156,67 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
-<!-- Main Content -->
-<div class="container">
-   <div class="student-resources">
-    <!-- Department Records -->
-    <div class="resource-card">
+<main>
+    <!-- ===== Department Records ===== -->
+    <h2><i class="fas fa-folder-open"></i> Department Records</h2>
+    <div class="student-resources">
+      <div class="resource-card">
         <div class="resource-icon">
-            <i class="fas fa-folder-open"></i>
+          <i class="fas fa-folder-open"></i>
         </div>
         <h3>Access Complete Department Records</h3>
         <p>Browse all official departmental records, including Class Routines, annual reports, program details, 
            meeting documents, and activity archives.</p>
         <a class="drive-btn" href="https://drive.google.com/drive/folders/1KCbccXiT0jBQeYQx7k3e6qM2zAVzYH8M?usp=sharing" target="_blank">
-            <i class="fab fa-google-drive"></i> View Records Folder
+          <i class="fab fa-google-drive"></i> View Records Folder
         </a>
+      </div>
     </div>
-</div>
 
-<!-- ===== Departmental Publications ===== -->
-<h2 style="margin-top:40px;"><i class="fas fa-book-reader"></i> Departmental Publications</h2>
-<div class="student-resources">
-    <!-- Wall Magazine -->
-    <div class="resource-card">
+    <!-- ===== Departmental Publications ===== -->
+    <h2><i class="fas fa-book-reader"></i> Departmental Publications</h2>
+    <div class="student-resources">
+      <!-- Wall Magazine -->
+      <div class="resource-card">
         <div class="resource-icon">
-            <i class="fas fa-book"></i>
+          <i class="fas fa-book"></i>
         </div>
         <h3>Wall Magazine</h3>
         <p>Explore the Department’s Wall Magazine showcasing creativity, articles, and student contributions.</p>
         <a class="drive-btn" href="https://drive.google.com/file/d/1dXidijvYZJZh-OHcWdt0a2SIWajYawqA/view?usp=sharing" target="_blank">
-            <i class="fab fa-google-drive"></i> View Wall Magazine
+          <i class="fab fa-google-drive"></i> View Wall Magazine
         </a>
-    </div>
+      </div>
 
-    <!-- Souvenir in Memory of Subhomoy Dey -->
-    <div class="resource-card">
+      <!-- Souvenir in Memory of Subhomoy Dey -->
+      <div class="resource-card">
         <div class="resource-icon">
-            <i class="fas fa-book-open"></i>
+          <i class="fas fa-book-open"></i>
         </div>
         <h3>Souvenir in Memory of Subhomoy Dey</h3>
         <p>A heartfelt publication by the Department in memory of our beloved faculty member, Subhomoy Dey.</p>
         <a class="drive-btn" href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3Af97ada8d-e696-3c32-a33d-5d71f49129f4&fbclid=IwY2xjawMMI2pleHRuA2FlbQIxMQABHoVvU00oDAcHXppf-BuYbhIEqKyadasgdYwyWIyqs6REB54uCtBda-htqyrU_aem_DZkIs5WtPZaHZJMIBcpbdA" target="_blank">
-            <i class="fas fa-file-pdf"></i> View Souvenir
+          <i class="fas fa-file-pdf"></i> View Souvenir
         </a>
+      </div>
     </div>
-</div>
 
-<!-- ===== Annual Reports & Event Archives ===== -->
-<h2 style="margin-top:40px;"><i class="fas fa-archive"></i> Annual Reports & Event Archives</h2>
-<div class="student-resources">
-    <!-- Event Archives -->
-    <div class="resource-card">
+    <!-- ===== Annual Reports & Event Archives ===== -->
+    <h2><i class="fas fa-archive"></i> Annual Reports & Event Archives</h2>
+    <div class="student-resources">
+      <!-- Event Archives -->
+      <div class="resource-card">
         <div class="resource-icon">
-            <i class="fas fa-calendar-alt"></i>
+          <i class="fas fa-calendar-alt"></i>
         </div>
         <h3>Events Archive</h3>
         <p>A consolidated record of successfully conducted departmental events, workshops, and activities.</p>
         <a class="drive-btn" href="https://docs.google.com/document/d/1g_MW06K-AzgtqnO08u-cvwZW-BYeX94B/edit?usp=sharing&ouid=111772697552234946992&rtpof=true&sd=true" target="_blank">
-            <i class="fab fa-google-drive"></i> View Events Archive
+          <i class="fab fa-google-drive"></i> View Events Archive
         </a>
+      </div>
     </div>
-</div>
-
-</div>
+  </main>
 <!-- Footer -->
 <footer>
     <div class="footer-links">
@@ -329,5 +230,6 @@
 
 </body>
 </html>
+
 
 
